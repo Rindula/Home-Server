@@ -23,6 +23,6 @@
         }
     }
         $price = number_format($price, 2);
-        echo "<tr class='gesamt'><td><b>Gesamtkosten</b></td><td></td><td><b>$price</b></td></tr>\n"
+        echo "<tr class='gesamt'><td><b>Gesamtkosten</b></td><td></td><td></td><td><b>$price</b></td></tr>\n"
     ?>
 </table>
