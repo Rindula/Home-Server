@@ -2,11 +2,15 @@ table {
     width: 100%;
 }
 
-td:nth-child(3) {
+td:nth-child(4) {
     width: 50px;
 }
 
-td:nth-child(3)::before {
+td:nth-child(1) {
+    width: 130px;
+}
+
+td:nth-child(4)::before {
     content: "€ "
 }
 
@@ -28,7 +32,7 @@ td {
     border: 2px solid black !important;
 }
 
-.gesamt > td:nth-child(3) > b {
+.gesamt > td:nth-child(4) > b {
     border-bottom: double 4px black;
 }
 
