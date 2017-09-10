@@ -1,0 +1,1 @@
+&copy; Sven Nolting, 2017 - <?php echo date("Y") ?>

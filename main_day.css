@@ -1,0 +1,33 @@
+table {
+	border-left: 2px dotted grey;
+}
+
+td {
+	padding: 10px;
+}
+
+body {
+	background-color: orange;
+	color: black;
+}
+
+h1 {
+	color: #4444A4;
+}
+
+p {
+	color: #4A4;
+}
+
+.heute {
+    background-color: rgba(102, 255, 204, 0.3);
+    color: #666666;
+}
+
+.morgen {
+    background-color: rgba(102, 255, 204, 0.05);
+}
+
+.vorbei {
+    opacity: 0.2;
+}

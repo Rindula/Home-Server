@@ -1,0 +1,66 @@
+table {
+    width: 100%;
+}
+
+td:nth-child(3) {
+    width: 50px;
+}
+
+td:nth-child(3)::before {
+    content: "€ "
+}
+
+tr:nth-child(even) {
+    background-color: #74B8C6;
+}
+tr:nth-child(odd) {
+    background-color: #EBEBEB;
+}
+
+td {
+    padding: 5px;
+    border-radius: 5px;
+    transition: opacity .2s linear;
+}
+
+.gesamt > td {
+    background-color: #A4FF7C !important;
+    border: 2px solid black !important;
+}
+
+.gesamt > td:nth-child(3) > b {
+    border-bottom: double 4px black;
+}
+
+th {
+    font-size: 28px;
+}
+
+input[type=number] {
+    position: absolute;
+    width: 80%;
+    font-size: 36px;
+    top: 50%;
+    left: 10%;
+    color: orangered;
+    background-color: black;
+    text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media not print {
+    tr:hover:not(.gesamt) > td {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}

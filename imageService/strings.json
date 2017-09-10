@@ -1,0 +1,6 @@
+{
+    "db_host": "Datenbank Host",
+    "db_user": "Datenbank User",
+    "db_pass": "Datenbank Passwort",
+    "db_name": "Datenbank Name"
+}

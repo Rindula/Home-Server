@@ -1,0 +1,61 @@
+label {
+    font-weight: bold;
+    display: block;
+}
+
+label::after {
+    content: ":";
+}
+
+output {
+    display: block;
+}
+
+.container {
+    display: block;
+    align-content: center;
+    text-align: center;
+}
+
+table {
+    float: left;
+}
+
+#img {
+    float: right;
+    max-width: 50%;
+}
+
+td:nth-child(2) {
+    border-left: 2px solid black;
+}
+
+td {
+    padding: 5px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+tr:nth-child(even) > td  {
+    background-color: #AAAAAA;
+}
+
+a, a:visited {
+    color: black;
+    text-decoration: wavy;
+}
+
+input[type=text], input[type=file] {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: black;
+    color: orangered;
+    font-weight: bold;
+    font-family: "Comic Sans MS";
+    font-size: 28px;
+}
+
+.invalid {
+    color: red !important;
+    background-color: rgba(255, 0, 0, 0.30) !important;
+}

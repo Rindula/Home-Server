@@ -1,0 +1,3 @@
+<html>
+<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&height=1080&wkst=2&hl=de&bgcolor=%23ffffff&src=rindola64%40gmail.com&color=%231B887A&src=%23contacts%40group.v.calendar.google.com&color=%2329527A&src=classroom103990651068217544987%40group.calendar.google.com&color=%233e2723&src=e_2_de%23weeknum%40group.v.calendar.google.com&color=%23182C57&ctz=Europe%2FBerlin" style="border-width:0" width="1920" height="1080" frameborder="0" scrolling="no"></iframe>
+</html>

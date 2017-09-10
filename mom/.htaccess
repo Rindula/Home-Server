@@ -1,0 +1,4 @@
+AuthUserFile "/var/www/html/mom/.htpasswd"
+AuthType Basic
+AuthName "Mom"
+require valid-user
