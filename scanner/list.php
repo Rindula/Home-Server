@@ -26,7 +26,7 @@
         </script>
     </head>
     <body>
-        <input type="month" onchange="update(this.value)">
+        <input value="<?= date("Y-m") ?>" type="month" onchange="update(this.value)">
         <div></div>
     </body>
     <script>
