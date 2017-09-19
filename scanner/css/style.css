@@ -61,9 +61,17 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-print-color-adjust: exact;
 }
 
+.top {
+    display: none;
+}
+
 @media print {
     input[type=month] {
         display: none;
+    }
+
+    .top {
+        display: block;
     }
 }
 

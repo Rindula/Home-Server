@@ -26,7 +26,7 @@
         </script>
     </head>
     <body>
-        <input id="datepick" value="<?= date("Y-m") ?>" type="month" onchange="update(this.value)">
+        <input id="datepick" value="<?= date("Y-m") ?>" type="month" onchange="update(this.value)"><h1 class="top">Verbrauchsliste</h1>
         <div></div>
     </body>
     <script>

@@ -1,4 +1,4 @@
-<h1><?= date("M. Y", strtotime($_GET["date"] . "-01")) ?></h1>
+<h2><?= date("M. Y", strtotime($_GET["date"] . "-01")) ?></h2>
 <table>
     <tr><th>Timestamp</th><th>Hersteller</th><th>Produkt</th><th>Preis</th></tr>
     <?php
