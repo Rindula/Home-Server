@@ -16,7 +16,7 @@
                             old = xhttp.responseText;
                         }
                         setTimeout(function() {
-                            update();
+                            update(document.getElementById("datepick").value);
                         }, 1000);
                     }
                 };
@@ -26,7 +26,7 @@
         </script>
     </head>
     <body>
-        <input value="<?= date("Y-m") ?>" type="month" onchange="update(this.value)">
+        <input id="datepick" value="<?= date("Y-m") ?>" type="month" onchange="update(this.value)">
         <div></div>
     </body>
     <script>
