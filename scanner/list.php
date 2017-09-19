@@ -7,12 +7,12 @@
         <link href="css/style.css" rel="stylesheet">
         <script>
             var old = "";
-            function update() {
+            function update(d) {
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         if (xhttp.responseText !== old) {
-                            document.getElementsByTagName("body")[0].innerHTML = xhttp.responseText;
+                            document.getElementsByTagName("div")[0].innerHTML = xhttp.responseText;
                             old = xhttp.responseText;
                         }
                         setTimeout(function() {
@@ -20,15 +20,16 @@
                         }, 1000);
                     }
                 };
-                xhttp.open("GET", "show.php", true);
+                xhttp.open("GET", "show.php?date=" + d, true);
                 xhttp.send();
             }
         </script>
     </head>
     <body>
-        
+        <input type="month" onchange="update(this.value)">
+        <div></div>
     </body>
     <script>
-    update();
+    update("<?= date("Y-m") ?>");
     </script>
 </html>

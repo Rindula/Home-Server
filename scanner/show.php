@@ -3,7 +3,7 @@
     <?php
         $conn = new mysqli("localhost", "root", "SiSal2002", "scanner");
         $conn->query("SET NAMES utf8");
-        $tablename = "scan_" . date("mY") . "";
+        $tablename = "scan_" . date("mY", $_GET["date"]) . "";
         $res = $conn->query("SELECT * FROM $tablename");
 
         $price = 0;

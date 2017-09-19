@@ -61,6 +61,12 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-print-color-adjust: exact;
 }
 
+@media print {
+    input[type=month] {
+        display: none;
+    }
+}
+
 @media not print {
     tr:hover:not(.gesamt) > td {
         opacity: 0.5;
