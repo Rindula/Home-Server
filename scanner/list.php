@@ -7,8 +7,8 @@
         <link href="css/style.css" rel="stylesheet">
         <script>
             var old = "";
+            var xhttp = new XMLHttpRequest();
             function update(d) {
-                var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         if (xhttp.responseText !== old) {
