@@ -75,11 +75,6 @@ input[type=number]::-webkit-outer-spin-button {
     }
     table { page-break-inside:auto }
     tr    { page-break-inside:avoid; page-break-after:auto }
-    @page {
-        @bottom-right {
-         content: counter(page) " / " counter(pages);
-        }
-     }
 }
 
 @media not print {
