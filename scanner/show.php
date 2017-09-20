@@ -1,6 +1,6 @@
 <h2><?= date("M. Y", strtotime($_GET["date"] . "-01")) ?></h2>
 <table>
-    <tr><th>Timestamp</th><th>Hersteller</th><th>Produkt</th><th>Preis</th></tr>
+    <tr><th>Timestamp</th><th>Marke</th><th>Produkt</th><th>Preis</th></tr>
     <?php
         $conn = new mysqli("localhost", "root", "SiSal2002", "scanner");
         $conn->query("SET NAMES utf8");
