@@ -1,0 +1,18 @@
+tr {
+    height: 8cm;
+    width: 20cm;
+    padding: 5mm;
+}
+
+table {
+    width: 100%;
+}
+
+code {
+    font-family: code;
+}
+
+@font-face {
+    font-family: code;
+    src: url("LibreBarcode39Text-Regular.ttf");
+}
