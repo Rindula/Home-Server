@@ -30,6 +30,7 @@ if($t == "lent") {
     $p = $conn->escape_string($_POST["name"]);
 
     $conn->query("INSERT INTO ausgeliehen (id, name) VALUES ('$i', '$p')");
+    die($conn->error);
 }
 
 header("Location: ./");
