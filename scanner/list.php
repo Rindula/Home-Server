@@ -18,7 +18,8 @@
                         setTimeout(function() {
                             update(document.getElementById("datepick").value);
                         }, 1000);
-                    } elseif (this.readyState == 4 && this.status != 200) {
+                    }
+                    if (this.readyState == 4 && this.status != 200) {
                         document.getElementsByTagName("div")[0].innerHTML = "<h1>Es ist ein Verbindungsfehler aufgetreten!</h1>";
                         setTimeout(function() {
                             update(document.getElementById("datepick").value);
