@@ -14,7 +14,12 @@ if($t == "get") {
     $c = $conn->escape_string($_POST["code"]);
 
     $r = $conn->query("SELECT id FROM beschreibung WHERE code = '$c'");
-    $id = $r->fetch_array()[0];
+    if($r->num_rows > 0) {
+        $id = $r->fetch_array()[0];
+    } else {
+        header("Location: ./");
+        die();
+    }
 
     $r = $conn->query("SELECT * FROM ausgeliehen WHERE id = '$id'");
     if($r->num_rows > 0) {
