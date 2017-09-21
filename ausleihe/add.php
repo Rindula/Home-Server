@@ -8,8 +8,7 @@
 </head>
 <body>
     <form action="query.php?type=add" method="post">
-        <input placeholder="Bezeichnung" type="text" name="bez" id="bez"><br>
-        <input placeholder="Code (0123456789)" type="text" name="code" id="code"><br>
+        <input placeholder="Bezeichnung" type="text" autofocus name="bez" id="bez"><br>
         <select name="konsole" id="konsole">
             <?php
             $conn = new mysqli("localhost", "root", "SiSal2002", "etiketten");
@@ -20,7 +19,7 @@
             }
             ?>
         </select><br>
-
+        <input placeholder="Code (0123456789)" type="text" name="code" id="code"><br>
         <input type="submit" value="Hinzufügen">
     </form>
 </body>
