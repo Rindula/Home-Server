@@ -8,7 +8,7 @@
     <title>Ausleihe</title>
 </head>
 <body>
-    <a href="scan.php?type=scan&step=1">Ausleihen / Zurücknehmen</a><br>
+    <a href="scan.php?type=scan">Ausleihen / Zurücknehmen</a><br>
     <a href="scan.php?type=add">Gegenstand registrieren</a>
     <hr>
     <table>

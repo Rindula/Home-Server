@@ -17,8 +17,7 @@ if($t == "get") {
     if($r->num_rows > 0) {
         $id = $r->fetch_array()[0];
     } else {
-        header("Location: ./");
-        die();
+        die("<meta http-equiv=\"refresh\" content=\"3; URL=./scan.php?type=add\"><h1>Gegebstand existiert nicht im System! Bitte registriere ihn zuerst!</h1>");
     }
 
     $r = $conn->query("SELECT * FROM ausgeliehen WHERE id = '$id'");
