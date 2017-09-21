@@ -13,8 +13,7 @@
     <ul>
     <?php
     $conn = new mysqli("localhost", "root", "SiSal2002", "etiketten");
-    $r = $conn->query("SELECT a.name, b.bez, a.timestamp, k.konsole FROM ausgeliehen a INNER JOIN beschreibung b ON a.id = b.id INNER JOIN konsole k ON b.konsole = k.id");
-    echo $conn->error;
+    $r = $conn->query("SELECT a.an, b.bez, a.timestamp, k.konsole FROM ausgeliehen AS a INNER JOIN beschreibung AS b ON a.id = b.id INNER JOIN konsole AS k ON b.konsole = k.id");
     while ($a = $r->fetch_array()) {
         $t = date("d.m.Y", strtotime($a[2]));
         echo "<li>".$a[1]." für ".$a[3]." | ".$a[0]." am ".$t."</li>";
