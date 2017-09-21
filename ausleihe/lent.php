@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="query.php?type=lent" method="post">
-        <input type="text" name="name" id="name">
+        <input type="text" autofocus name="name" id="name">
         <input type="hidden" name="id" value="<?= $_GET["id"] ?>">
         <input type="submit" value="Ausleihen">
     </form>
