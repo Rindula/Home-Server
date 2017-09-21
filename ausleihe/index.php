@@ -12,7 +12,7 @@
     <a href="scan.php?type=add">Gegenstand registrieren</a>
     <hr>
     <table>
-        <tr><th>Bezeichnung</th><th>Konsole / Art</th><th>Verliehen an</th><th>Verliehem am</th></tr>
+        <tr><th>Bezeichnung</th><th>Konsole / Art</th><th>Verliehen an</th><th>Verliehen am</th></tr>
     <?php
     $conn = new mysqli("localhost", "root", "SiSal2002", "etiketten");
     $r = $conn->query("SELECT a.an, z.bez, a.timestamp, k.konsole FROM ausgeliehen AS a INNER JOIN zeug AS z ON a.id = z.id INNER JOIN beschreibung AS b ON b.id = a.id INNER JOIN konsole AS k ON b.konsole = k.id");
