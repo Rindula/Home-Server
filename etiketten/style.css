@@ -2,7 +2,7 @@ code {
     font-family: code;
     font-size: 45px;
     display: block;
-    padding: 10mm;
+    margin-bottom: 10mm;
 }
 
 @font-face {
