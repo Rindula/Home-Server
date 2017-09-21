@@ -21,7 +21,7 @@
             ?>
         </select><br>
 
-        <input type="button" value="Hinzufügen">
+        <input type="submit" value="Hinzufügen">
     </form>
 </body>
 </html>
