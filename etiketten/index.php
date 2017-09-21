@@ -8,29 +8,16 @@
     <title>Etikettendruck</title>
 </head>
 <body>
-    <table>
     <?php
 
     $filename = "./codes.lst";
     $lines = file($filename);
 
-    $right = false;
 
     foreach($lines as $line_num => $line) {
-        if($right) {
-            echo "<td><code>$line</code></td></tr>";
-        } else {
-            echo "<tr><td><code>$line</code></td>";
-        }
-
-        $right = !$right;
-    }
-
-    if($right) {
-        echo "</tr>";
+        echo "<code>$line</code>";
     }
 
     ?>
-    </table>
 </body>
 </html>

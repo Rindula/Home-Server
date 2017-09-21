@@ -1,15 +1,8 @@
-tr {
-    height: 8cm;
-    width: 20cm;
-    padding: 5mm;
-}
-
-table {
-    width: 100%;
-}
-
 code {
     font-family: code;
+    font-size: 45px;
+    display: block;
+    padding: 10mm;
 }
 
 @font-face {
