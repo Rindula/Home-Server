@@ -4,7 +4,7 @@ $t = $_GET["type"];
 
 switch ($t) {
     case 'scan':
-        include "";
+        include "check.php";
         break;
     
     case 'add':
