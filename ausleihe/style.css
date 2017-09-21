@@ -7,3 +7,7 @@ td {
 tr:nth-child(even) {
     background-color: #9AB9D3;
 }
+
+table {
+    width: 100%;
+}
