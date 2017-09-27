@@ -4,7 +4,7 @@ $t = $_GET["type"];
 require "connection.php";
 
 if ($t == "add") {
-    $conn->query("INSERT INTO bestand (bez) VALUES ('".$conn->escape_string($_POST["bez"])."')");
+    $conn->query("INSERT INTO bestand (bez, author) VALUES ('".$conn->escape_string($_POST["bez"])."', '".$conn->escape_string($_POST["author"])."')");
     $r = $conn->query("SELECT max(id) FROM bestand");
     $id = $r->fetch_array()[0];
     $conn->query("INSERT INTO beschreibung (id, code, genre) VALUES ('$id', '".$conn->escape_string($_POST["code"])."', '".$conn->escape_string($_POST["genre"])."');");

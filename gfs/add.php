@@ -9,6 +9,7 @@
 <body>
     <form action="query.php?type=add" method="post">
         <input placeholder="Bezeichnung" type="text" autofocus name="bez" id="bez"><br>
+        <input placeholder="Author" type="text" autofocus name="author" id="author"><br>
         <select name="genre" id="genre">
             <?php
             require "connection.php";
