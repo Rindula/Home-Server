@@ -15,7 +15,7 @@ if (trim($q) == "") {
     $sql = "SELECT * FROM personen WHERE name LIKE '%$q%' OR vorname LIKE '%$q%'";
 }
 
-$db_link = new mysqli("localhost", "root", "SiSal2002", "kontakte");
+$db_link = new mysqli("25.83.12.108", "root", "SiSal2002", "kontakte");
 
 $result = $db_link->query($sql);
 echo( "<main>" );

@@ -28,7 +28,7 @@
         <table>
             <tr><th>ID</th><th>Name</th><th>Hochladedatum</th></tr>
             <?php
-            $conn = new mysqli("localhost", "root", "SiSal2002", "images");
+            $conn = new mysqli("25.83.12.108", "root", "SiSal2002", "images");
             
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);

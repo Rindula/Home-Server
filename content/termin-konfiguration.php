@@ -1,5 +1,5 @@
 <?php
-define ( 'MYSQL_HOST', 'localhost' );
+define ( 'MYSQL_HOST', '25.83.12.108' );
 define ( 'MYSQL_BENUTZER', 'root' );
 define ( 'MYSQL_KENNWORT', 'SiSal2002' );
 define ( 'MYSQL_DATENBANK', 'terminkalender' );

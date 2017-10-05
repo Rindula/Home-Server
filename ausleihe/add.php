@@ -11,7 +11,7 @@
         <input placeholder="Bezeichnung" type="text" autofocus name="bez" id="bez"><br>
         <select name="konsole" id="konsole">
             <?php
-            $conn = new mysqli("localhost", "root", "SiSal2002", "etiketten");
+            $conn = new mysqli("25.83.12.108", "root", "SiSal2002", "etiketten");
 
             $r = $conn->query("SELECT * FROM konsole");
             while($a = $r->fetch_assoc()) {

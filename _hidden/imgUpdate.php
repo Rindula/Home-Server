@@ -7,7 +7,7 @@
 	$value = $_GET["link"];
 	
 	// Datenbankverbindung herstellen
-        $conn = mysqli_connect("localhost", "root", $mySqlPassword, "myPasswords");
+        $conn = mysqli_connect("25.83.12.108", "root", $mySqlPassword, "myPasswords");
 	
 	
 	if (isSet($_GET["delete"])) {

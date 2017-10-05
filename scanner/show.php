@@ -2,7 +2,7 @@
 <table>
     <tr><th>Timestamp</th><th>Marke</th><th>Produkt</th><th>Preis</th></tr>
     <?php
-        $conn = new mysqli("localhost", "root", "SiSal2002", "scanner");
+        $conn = new mysqli("25.83.12.108", "root", "SiSal2002", "scanner");
         $conn->query("SET NAMES utf8");
         $tablename = "scan_" . date("mY", strtotime($_GET["date"] . "-01")) . "";
         $res = $conn->query("SELECT * FROM $tablename");

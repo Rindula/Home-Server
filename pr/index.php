@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = new mysqli("localhost", "root", "SiSal2002", "produktionen");
+$mysqli = new mysqli("25.83.12.108", "root", "SiSal2002", "produktionen");
 $result = $mysqli->query("SELECT * FROM Factorio_items");
 
 while ($row = $result->fetch_assoc()) {

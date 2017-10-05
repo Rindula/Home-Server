@@ -8,7 +8,7 @@ if (trim($c) == "") {
 }
 
 if (strlen($c) == 8 || strlen($c) == 12 || strlen($c) == 13) {
-    $conn = new mysqli("localhost", "root", "SiSal2002", "scanner");
+    $conn = new mysqli("25.83.12.108", "root", "SiSal2002", "scanner");
 
     $tablename = "scan_" . date("mY") . "";
 

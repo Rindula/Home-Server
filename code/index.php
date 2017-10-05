@@ -25,7 +25,7 @@
         header("Content-type:text/html; charset=utf-8");
 
         // Datenbankverbindung herstellen
-        $conn = mysqli_connect("localhost", "root", $mySqlPassword, "stats");
+        $conn = mysqli_connect("25.83.12.108", "root", $mySqlPassword, "stats");
         $queryCreateUsersTable = "CREATE TABLE IF NOT EXISTS `arbeit` ( `ID` INT NOT NULL AUTO_INCREMENT , `name` TEXT NOT NULL DEFAULT '' , `content` TEXT NOT NULL DEFAULT '' , `language` varchar(255) NOT NULL DEFAULT 'Java' , PRIMARY KEY (`ID`)) ENGINE = InnoDB;";
         $conn->query($queryCreateUsersTable);
         $conn->query("SET NAMES utf8");

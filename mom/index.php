@@ -1,6 +1,6 @@
 <?php
 // Zu Datenbank verbinden
-$mysqli = mysqli_connect("localhost", "root", "SiSal2002", "mom");
+$mysqli = mysqli_connect("25.83.12.108", "root", "SiSal2002", "mom");
 $mysqli->set_charset("utf8");
 setlocale(LC_ALL, "de_DE.UTF-8");
 
