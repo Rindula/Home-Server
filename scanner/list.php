@@ -27,7 +27,10 @@
         </script>
     </head>
     <body class="bg-dark">
-        <input class="d-print-none form-control bg-dark text-light border border-warning rounded" id="datepick" value="<?= date("Y-m") ?>" type="month" onchange="update(this.value)"><h1 class="display-1 text-info d-print-none">Verbrauchsliste</h1>
+        <input class="d-print-none form-control bg-dark text-light border border-warning rounded" id="datepick" value="<?= date("Y-m") ?>" type="month" onchange="update(this.value)">
+        <br>
+        <a href="javascript:window.print()" role="button" class="btn btn-outline-info d-print-none">Drucken</a>
+        <h1 class="display-1 text-info d-print-none">Verbrauchsliste</h1>
         <div class="content-fluid"></div>
     </body>
     <script>
