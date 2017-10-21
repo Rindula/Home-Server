@@ -26,8 +26,10 @@
 
             $ret = $conn->query("SELECT * FROM personendaten WHERE id > 0 ORDER BY name");
             
-            while ($r = $ret->fetch_assoc()) {
-                echo "<option value='".$r["id"]."'>".$r["name"].", ".$r["vorname"]."</option>";
+            if ($ret->num_rows > 0) {
+                while ($r = $ret->fetch_assoc()) {
+                    echo "<option value='".$r["id"]."'>".$r["name"].", ".$r["vorname"]."</option>";
+                }
             }
             ?>
         </select>
