@@ -14,7 +14,7 @@
     <form class="p-4 form" action="enterbill.php" method="post">
     <div class="input-group">
         <span class="input-group-addon">€</span>
-        <input required id="betrag" name="betrag" type="text" class="form-control" placeholder="Betrag">
+        <input required id="betrag" name="betrag" type="number" class="form-control" placeholder="Betrag">
     </div>
     <br>
     <div class="form-group">

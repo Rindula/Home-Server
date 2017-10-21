@@ -4,7 +4,7 @@ $conn = new mysqli("localhost", "root", "SiSal2002", "rechnungen");
 $conn->query("SET NAMES 'utf8'");
 
 
-$bet = $conn->real_escape_string($_POST["betrag"]);
+$bet = $conn->real_escape_string(str_replace(",", ".", $_POST["betrag"]));
 $an = $conn->real_escape_string($_POST["an"]);
 $fur = $conn->real_escape_string($_POST["für"]);
 
