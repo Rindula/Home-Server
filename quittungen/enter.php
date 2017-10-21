@@ -14,7 +14,7 @@
     <form class="p-4 form" action="enterbill.php" method="post">
     <div class="input-group">
         <span class="input-group-addon">€</span>
-        <input required id="betrag" name="betrag" type="number" class="form-control" placeholder="Betrag">
+        <input required id="betrag" name="betrag" type="number" class="form-control" autocomplete="off" placeholder="Betrag">
     </div>
     <br>
     <div class="form-group">
@@ -37,7 +37,7 @@
     <br>
     <div class="input-group">
         <span class="input-group-addon fa fa-book"></span>
-        <textarea name="für" id="für" class="form-control" placeholder="Für..."></textarea>
+        <textarea name="für" id="für" class="form-control" autocomplete="off" placeholder="Für..."></textarea>
     </div>
     <br>
     <button class="btn btn-outline-success btn-block" type="submit">Rechnung erstellen</button>
@@ -46,11 +46,11 @@
     <form class="p-4 form" method="post" action="addreceiver.php">
     <div class="input-group">
         <span class="input-group-addon">Name</span>
-        <input required id="name" name="name" type="text" class="form-control" placeholder="Name">
+        <input required id="name" name="name" type="text" class="form-control" autocomplete="off" placeholder="Name">
     </div>
     <div class="input-group">
         <span class="input-group-addon">Vorname</span>
-        <input required id="vorname" name="vorname" type="text" class="form-control" placeholder="Vorname">
+        <input required id="vorname" name="vorname" type="text" class="form-control" autocomplete="off" placeholder="Vorname">
     </div>
     <br>
     <button class="btn btn-outline-info" type="submit">Rechnungsempfänger eintragen</button>
