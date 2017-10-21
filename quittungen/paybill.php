@@ -4,7 +4,7 @@ if(!isset($_GET["id"])) die();
 
 $id = $_GET["id"];
 
-$conn = new mysqli("localhost", "root", "74cb0A0kER", "rechnungen");
+$conn = new mysqli("localhost", "root", "SiSal2002", "rechnungen");
 $conn->query("SET NAMES 'utf8'");
 
 if(isset($_GET["revoke"])) {

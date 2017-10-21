@@ -15,7 +15,7 @@
     <table class="table table-striped">
         <tr><th scope="col">Rechnungsnummer</th><th>Bezahlt von</th><th>Empfänger</th><th>Datum</th><th>Betrag</th><th>Nicht bezahlt</th></tr>
     <?php
-        $conn = new mysqli("localhost", "root", "74cb0A0kER", "rechnungen");
+        $conn = new mysqli("localhost", "root", "SiSal2002", "rechnungen");
         $conn->query("SET NAMES 'utf8'");
         $ret = $conn->query("SELECT r.für, r.bezahlt, r.id, p.name, p.vorname, pa.name as 'namea', pa.vorname as 'vornamea', r.timestamp, r.betrag FROM rechnung as r inner join personendaten as p on p.id = r.von inner join personendaten as pa on pa.id = r.an");
         $got = 0;
