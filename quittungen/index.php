@@ -12,8 +12,12 @@
     <form action="enter.php" method="get">
         <button class="btn btn-info btn-block rounded-0" type="submit">Neue Rechnung</button>
     </form>
-    <table class="table table-striped">
-        <tr><th scope="col">Rechnungsnummer</th><th>Bezahlt von</th><th>Empfänger</th><th>Datum</th><th>Betrag</th><th>Nicht bezahlt</th></tr>
+    <div class="table-responsive">
+    <table id="dataTable" class="table table-striped dataTable">
+        <thead>
+            <tr role="row"><th scope="col">Rechnungsnummer</th><th>Bezahlt von</th><th>Empfänger</th><th>Datum</th><th>Betrag</th><th>Nicht bezahlt</th></tr>
+        </thead>
+        <tbody>
     <?php
         $conn = new mysqli("localhost", "root", "SiSal2002", "rechnungen");
         $conn->query("SET NAMES 'utf8'");
@@ -39,16 +43,17 @@
         $remain = number_format($remain, 2);
         $got = number_format($got, 2);
 
-        echo "<tr class='table-success font-weight-bold text-success'><td scope='row'>Gesamt:</td><td></td><td></td><td></td><td>€$got</td><td class='text-danger'>€$remain</td></tr>";
+        echo "</tbody><tfoot><tr class='table-success font-weight-bold text-success'><td scope='row'>Gesamt:</td><td></td><td></td><td></td><td>€$got</td><td class='text-danger'>€$remain</td></tr></tfoot>";
     ?>
     </table>
-    
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script>
         $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
+            $('[data-toggle="tooltip"]').tooltip();
+            $("#dataTable").DataTable();
         })
     </script>
 </body>
