@@ -608,6 +608,8 @@
               myObj = JSON.parse(this.responseText);
               txt = ""
               for (x in myObj) {
+                var date = new Date(myObj[x].commit.author.date);
+                var d = ("0" + date.getDate()).slice(-2) + "." + ("0" + (date.getMonth() + 1)).slice(-2) + "." + date.getFullYear() + ", " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2)
                 txt += '<a class="list-group-item list-group-item-action" href="' + myObj[x].html_url + '"><div class="media"><img width="45" class="d-flex mr-3 rounded-circle" src="' + myObj[x].author.avatar_url + '" alt=""><div class="media-body"><i class="fa fa-code-fork"></i><strong>' + myObj[x].commit.author.name + '</strong> committed <strong>' + myObj[x].commit.message + "</strong> nach Github</div></div></a>";
               }
               document.getElementById("feed").innerHTML = txt;
