@@ -24,6 +24,6 @@
         }
     }
         $price = number_format($price, 2);
-        echo "<tr class='table-success text-success font-weight-bold'><td>Gesamtkosten</td><td></td><td></td><td><u>$price</u></td></tr>\n"
+        echo "<tr class='table-success text-danger font-weight-bold'><td>Gesamtkosten</td><td></td><td></td><td><u>$price</u></td></tr>\n"
     ?>
 </table>
