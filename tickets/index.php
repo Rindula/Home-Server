@@ -39,13 +39,13 @@ function suppList($id) {
     <div class="table-responsive">
     <table id="dataTable" class="table table-striped dataTable">
         <thead>
-            <tr role="row"><th scope="col">Ticketnummer</th><th>Eingereicht von</th><th>Bearbeitender Supporter</th><th>Datum</th><th>Steuerung</th></tr>
+            <tr role="row"><th scope="col">Ticketnummer</th><th>Bereich</th><th>Eingereicht von</th><th>Bearbeitender Supporter</th><th>Datum</th><th>Steuerung</th></tr>
         </thead>
         <tbody>
     <?php
         $conn = new mysqli("localhost", "root", "SiSal2002", "support");
         $conn->query("SET NAMES 'utf8'");
-        $ret = $conn->query("SELECT t.id, t.von, t.text, t.supporter, s.name, t.erledigt, t.timestamp FROM tickets as t inner join supporter as s on t.supporter = s.id");
+        $ret = $conn->query("SELECT t.id, t.von, t.text, t.supporter, s.name, t.erledigt, t.timestamp, t.system FROM tickets as t inner join supporter as s on t.supporter = s.id");
         $got = 0;
         $remain = 0;
         $modal = "";
@@ -59,7 +59,7 @@ function suppList($id) {
 
             $modal .= '<div class="modal fade" id="'.$r["id"].'" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">'.$modalTitle.'</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p>'.$modalBody.'</p></div><div class="modal-footer"><form action="deletebill.php" method="post"><button type="submit" class="btn btn-outline-danger" name="id" value="'.$r["id"].'">Ja, bitte</button> <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button></form></div></div></div></div>';
             
-            echo "<tr class='lead ". (($r["supporter"] == 0) ? "table-danger" : (($r["erledigt"] == 0) ? "table-info" : "" )) ."'><td scope='row'>".$r["id"]."</td><td>".$r["von"]."</td><td>".(($r["supporter"] == 0) ? suppList($r["id"]) : $r["name"])."</td><td>".$timestamp."</td><td>".(($r["erledigt"] == 0) ? "<a class='btn btn-outline-success' data-toggle='tooltip' data-placement='left' title='Ticket als gelöst markieren' href='paybill.php?id=".$r["id"]."'>&#10004;</a>" : "<a class='btn btn-outline-warning' data-html='true' data-toggle='tooltip' data-placement='left' title='Ticket als <b><u>NICHT</u></b> gelöst markieren' href='paybill.php?revoke&id=".$r["id"]."'>&#10006;</a>")." <a class='btn btn-outline-danger fa fa-trash' data-toggle='modal' href='#".$r["id"]."' aria-controls='".$r["id"]."' aria-expanded='false' title='Ticket löschen'></a> <a class='btn btn-outline-info fa fa-info' data-toggle='collapse' href='#info_".$r["id"]."' aria-controls='info_".$r["id"]."' aria-expanded='false' title='Beschreibung anzeigen'></a> <form action='changeSupp.php' method='post'><input type='hidden' name='id' value='".$r["id"]."'><button name='name' value='0' title='Zugewiesenen Supporter entfernen' class='btn btn-outline-dark fa fa-user-circle-o'></button></form></td></tr>";
+            echo "<tr class='lead ". (($r["supporter"] == 0) ? "table-danger" : (($r["erledigt"] == 0) ? "table-info" : "" )) ."'><td scope='row'>".$r["id"]."</td><td>".$r["system"]."</td><td>".$r["von"]."</td><td>".(($r["supporter"] == 0) ? suppList($r["id"]) : $r["name"])."</td><td>".$timestamp."</td><td>".(($r["erledigt"] == 0) ? "<a class='btn btn-outline-success' data-toggle='tooltip' data-placement='left' title='Ticket als gelöst markieren' href='paybill.php?id=".$r["id"]."'>&#10004;</a>" : "<a class='btn btn-outline-warning' data-html='true' data-toggle='tooltip' data-placement='left' title='Ticket als <b><u>NICHT</u></b> gelöst markieren' href='paybill.php?revoke&id=".$r["id"]."'>&#10006;</a>")." <a class='btn btn-outline-danger fa fa-trash' data-toggle='modal' href='#".$r["id"]."' aria-controls='".$r["id"]."' aria-expanded='false' title='Ticket löschen'></a> <a class='btn btn-outline-info fa fa-info' data-toggle='collapse' href='#info_".$r["id"]."' aria-controls='info_".$r["id"]."' aria-expanded='false' title='Beschreibung anzeigen'></a> <form action='changeSupp.php' method='post'><input type='hidden' name='id' value='".$r["id"]."'><button name='name' value='0' title='Zugewiesenen Supporter entfernen' class='btn btn-outline-dark fa fa-user-circle-o'></button></form></td></tr>";
             echo "<tr data-toggle='collapse' id='info_".$r["id"]."' class='table-dark collapse fade'><td colspan='6' class='p-4'><pre>".$text."</pre></td></tr>";
         }
     ?>
