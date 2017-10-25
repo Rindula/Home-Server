@@ -6,7 +6,7 @@ $conn->query("SET NAMES 'utf8'");
 $lastId = $conn->real_escape_string($_GET["last"]);
 if (!empty($_GET["id"])) {
 
-    $id = $conn->real_escape_string($_GET["id"]);
+    $id = $conn->real_escape_string(strtolower($_GET["id"]));
 
     $ret = $conn->query("SELECT aid, bez FROM artikel WHERE identifier = '$id'");
     $r = $ret->fetch_assoc();
