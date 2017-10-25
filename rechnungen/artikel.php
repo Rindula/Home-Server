@@ -15,7 +15,7 @@ $conn->query("SET NAMES 'utf8'");
     <style>
         @font-face {
             font-family: barcode;
-            src: url(CarolinaBarUPC_Normal.ttf);
+            src: url(LibreBarcode39Text-Regular.ttf);
         }
         .barcode {
             font-family: barcode !important;
