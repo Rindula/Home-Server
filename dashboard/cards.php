@@ -4,7 +4,7 @@
   Variablen zum Anzeigen
 */
 $conn = new mysqli("localhost", "root", "SiSal2002", "rechnungen");
-if (($ret = $conn->query("SELECT COUNT(*) FROM rechnung")) !== FALSE) {
+if (($ret = $conn->query("SELECT COUNT(*) FROM rechnung WHERE offen = 1")) !== FALSE) {
   $r = $ret->fetch_array();
 	$anzahlRechnungen = $r[0];
 } else {
@@ -55,7 +55,7 @@ $hw = count($hw);
         <div class="card-body-icon">
           <i class="fa fa-fw fa-list"></i>
         </div>
-        <div class="mr-5"><?= $anzahlRechnungen ?> Rechnungen eingetragen</div>
+        <div class="mr-5"><?= $anzahlRechnungen ?> Rechnungen offen</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="/rechnungen">
         <span class="float-left">View Details</span>
