@@ -15,12 +15,12 @@ if (!empty($_GET["id"])) {
     $conn->query("INSERT INTO rechnungspointer (rid, aid) VALUES ('$lastId', '$aid')");
 }
 
-$ret = $conn->query("SELECT a.bez, a.preis, count(rp.aid) as 'cnt' FROM artikel as a inner join rechnungspointer as rp on rp.aid = a.aid inner join rechnung as r on rp.rid = r.rid WHERE r.rid = $lastId group by a.aid");
+$ret = $conn->query("SELECT a.bez, a.preis, count(rp.aid) as 'cnt', sum(a.preis) as 'ges' FROM artikel as a inner join rechnungspointer as rp on rp.aid = a.aid inner join rechnung as r on rp.rid = r.rid WHERE r.rid = $lastId group by a.aid");
 $p = 0;
 while ($r = $ret->fetch_assoc()) {
     $pr = number_format($r["preis"] * $r["cnt"], 2);
     echo "<div class='list-group-item'><div class='d-flex w-100 justify-content-between'><h5 class='mb-5'>".$r["cnt"]."x ".$r["bez"]."</h5><small class='text-muted'>".$r["cnt"]." x ".$r["preis"]."€<br><b>".$pr."€</b></small></div></div>";
     $p += $pr;
 }
-
+echo "<div class='list-group-item fixed-bottom'><div class='d-flex w-100 justify-content-between'><h2>Gesamtpreis:</h2> <h3>".number_format($p, 2)."€</h3></div></div>";
 $conn->query("UPDATE rechnung SET preis = '$p' WHERE rid = '$lastId'");
