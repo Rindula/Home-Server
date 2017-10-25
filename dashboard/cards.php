@@ -57,7 +57,7 @@ $hw = count($hw);
         </div>
         <div class="mr-5"><?= $anzahlRechnungen ?> Rechnungen eingetragen</div>
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="/quittungen">
+      <a class="card-footer text-white clearfix small z-1" href="/rechnungen">
         <span class="float-left">View Details</span>
         <span class="float-right">
           <i class="fa fa-angle-right"></i>
