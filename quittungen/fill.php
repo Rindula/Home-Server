@@ -4,7 +4,7 @@ if(!isset($_GET["id"])) die();
 
 $id = $_GET["id"];
 
-$conn = new mysqli("localhost", "root", "SiSal2002", "rechnungen");
+$conn = new mysqli("localhost", "root", "SiSal2002", "quittungen");
 $conn->query("SET NAMES 'utf8'");
 $ret = $conn->query("SELECT r.an, r.bezahlt, r.id, p.name, p.vorname, pa.name as 'namea', pa.vorname as 'vornamea', r.timestamp, r.betrag, r.für FROM rechnung as r inner join personendaten as p on p.id = r.von inner join personendaten as pa on pa.id = r.an WHERE r.id = '$id'");
 

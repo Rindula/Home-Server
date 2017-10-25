@@ -21,7 +21,7 @@
         <select required class="form-control" id="an" name="an">
             <option value="" selected disabled>--- Rechnungsempfänger ---</option>
             <?php
-            $conn = new mysqli("localhost", "root", "SiSal2002", "rechnungen");
+            $conn = new mysqli("localhost", "root", "SiSal2002", "quittungen");
             $conn->query("SET NAMES 'utf8'");
 
             $ret = $conn->query("SELECT * FROM personendaten WHERE id > 0 ORDER BY name");

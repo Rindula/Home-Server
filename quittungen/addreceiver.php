@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "SiSal2002", "rechnungen");
+$conn = new mysqli("localhost", "root", "SiSal2002", "quittungen");
 $conn->query("SET NAMES 'utf8'");
 
 

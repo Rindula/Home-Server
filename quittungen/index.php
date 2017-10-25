@@ -19,7 +19,7 @@
         </thead>
         <tbody>
     <?php
-        $conn = new mysqli("localhost", "root", "SiSal2002", "rechnungen");
+        $conn = new mysqli("localhost", "root", "SiSal2002", "quittungen");
         $conn->query("SET NAMES 'utf8'");
         $ret = $conn->query("SELECT r.für, r.bezahlt, r.id, p.name, p.vorname, pa.name as 'namea', pa.vorname as 'vornamea', r.timestamp, r.betrag FROM rechnung as r inner join personendaten as p on p.id = r.von inner join personendaten as pa on pa.id = r.an");
         $got = 0;
