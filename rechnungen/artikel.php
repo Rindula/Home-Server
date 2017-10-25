@@ -15,7 +15,7 @@ $conn->query("SET NAMES 'utf8'");
     <style>
         @font-face {
             font-family: barcode;
-            src: url(LibreBarcode39Text-Regular.ttf);
+            src: url(fre3of9x.ttf);
         }
         .barcode {
             font-family: barcode !important;
@@ -27,7 +27,7 @@ $conn->query("SET NAMES 'utf8'");
             <?php
             $ret = $conn->query("SELECT bez, identifier, preis FROM artikel");
             while ($r = $ret->fetch_assoc()) {
-                echo "<div class='d-inline-block w-50 p-4 border'><div class='d-flex w-100 justify-content-between'><h5 class='mb-5'>".$r["bez"]."</h5><small class='text-muted'>".$r["preis"]."€</small></div><span class='h1 barcode'>".$r["identifier"]."</span></div>";
+                echo "<div class='d-inline-block w-50 p-4 border'><div class='d-flex w-100 justify-content-between'><h5 class='mb-5'>".$r["bez"]."</h5><small class='text-muted'>".$r["preis"]."€</small></div><span class='h1 barcode'>*".$r["identifier"]."*</span></div>";
             }
             ?>
     </div>
