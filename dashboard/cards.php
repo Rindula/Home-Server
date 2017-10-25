@@ -3,9 +3,8 @@
 /*
   Variablen zum Anzeigen
 */
-$conn = new mysqli("localhost", "root", "SiSal2002");
-$conn->query("use rechnungen");
-if (($ret = $conn->query("SELECT COUNT(*) FROM rechnungen")) !== FALSE) {
+$conn = new mysqli("localhost", "root", "SiSal2002", "rechnungen");
+if (($ret = $conn->query("SELECT COUNT(*) FROM rechnung")) !== FALSE) {
   $r = $ret->fetch_array();
 	$anzahlRechnungen = $r[0];
 } else {
