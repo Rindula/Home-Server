@@ -18,12 +18,12 @@
         if ($pr->num_rows > 0) {
             $p = $pr->fetch_assoc();
             $price = $price + $p["preis"];
-            echo "<tr title='Gescannt am $date um $time'><td>$date, $time</td><td>" . $p["hersteller"] . "</td><td>" . $p["produkt"] . "</td><td>" . number_format($p["preis"], 2) . "</td></tr>\n\t\t\t";
+            echo "<tr title='Gescannt am $date um $time'><td>$date, $time</td><td>" . $p["hersteller"] . "</td><td>" . $p["produkt"] . "</td><td>€" . number_format($p["preis"], 2) . "</td></tr>";
         } else {
-            echo "<tr class='table-warning text-danger font-weight-bold' title='Gescannt am $date um $time'><td>$date, $time</td><td></td><td><a href='https://www.codecheck.info/product.search?q=" . $r["code"] . "' target='productid'>" . $r["code"] . "</a></td><td>0.00</td></tr>\n\t\t\t";
+            echo "<tr class='table-warning text-danger font-weight-bold' title='Gescannt am $date um $time'><td>$date, $time</td><td></td><td><a href='https://www.codecheck.info/product.search?q=" . $r["code"] . "' target='productid'>" . $r["code"] . "</a></td><td>0.00</td></tr>";
         }
     }
         $price = number_format($price, 2);
-        echo "<tr class='table-success text-danger font-weight-bold'><td>Gesamtkosten</td><td></td><td></td><td><u>$price</u></td></tr>\n"
+        echo "<tr class='table-success text-danger font-weight-bold'><td>Gesamtkosten</td><td></td><td></td><td><u>€$price</u></td></tr>\n"
     ?>
 </table>
