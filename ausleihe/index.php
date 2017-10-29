@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <title>Ausleihe</title>
 </head>
 <body>
     <a href="scan.php?type=scan">Ausleihen / Zurücknehmen</a><br>
     <a href="scan.php?type=add">Gegenstand registrieren</a>
     <hr>
-    <table>
+    <table class="table table-striped">
         <tr><th>Bezeichnung</th><th>Konsole / Art</th><th>Verliehen an</th><th>Verliehen am</th></tr>
     <?php
     $conn = new mysqli("25.83.12.108", "root", "SiSal2002", "etiketten");
