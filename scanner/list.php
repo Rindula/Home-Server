@@ -27,10 +27,7 @@
         </script>
     </head>
     <body class="bg-dark">
-        <div class="input-append date" id="datepicker" data-date="<?= date("Y-m") ?>" data-date-format="yyyy-mm">
-            <input  type="text" readonly="readonly" name="date" >    
-            <span class="add-on"><i class="icon-th"></i></span>      
-        </div>
+        <input type="text" class="form-control form-control-1 input-sm from" placeholder="Monat" >
         <br>
         <a href="javascript:window.print()" role="button" class="btn btn-outline-info d-print-none">Drucken</a>
         <h1 class="display-1 text-info d-print-none">Verbrauchsliste</h1>
@@ -45,10 +42,10 @@
         update(document.getElementById("datepick").value);
     }, 1000);
     update("<?= date("Y-m") ?>");
-    $("#datepicker").datepicker( {
-        format: "mm-yyyy",
-        startView: "months", 
-        minViewMode: "months"
-    });
+    $('.from').datepicker({
+        autoclose: true,
+        minViewMode: 1,
+        format: 'yyyy-mm'
+    })
     </script>
 </html>
