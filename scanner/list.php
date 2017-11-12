@@ -36,7 +36,7 @@
     <script>
     setInterval(function() {
         update(document.getElementById("datepick").value);
-    }, 1000);
+    }, 10000);
     update("<?= date("Y-m") ?>");
     </script>
 </html>
