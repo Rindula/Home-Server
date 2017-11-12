@@ -12,12 +12,12 @@
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         if (xhttp.responseText !== old) {
-                            document.getElementsByTagName("div")[0].innerHTML = xhttp.responseText;
+                            document.getElementsByTagName("div")[1].innerHTML = xhttp.responseText;
                             old = xhttp.responseText;
                         }
                     }
                     if (this.readyState == 4 && this.status != 200) {
-                        document.getElementsByTagName("div")[0].innerHTML = "<h1>Es ist ein Verbindungsfehler aufgetreten!</h1>";
+                        document.getElementsByTagName("div")[1].innerHTML = "<h1>Es ist ein Verbindungsfehler aufgetreten!</h1>";
                         old = "";
                     }
                 };
