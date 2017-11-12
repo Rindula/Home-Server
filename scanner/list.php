@@ -27,7 +27,9 @@
         </script>
     </head>
     <body class="bg-dark">
-        <input type="text" class="form-control form-control-1 input-sm from" placeholder="Monat" >
+        <div class="form-group">
+            <input type="text" class="form-control form-control-1 input-sm from" placeholder="Monat" value="<?= date("Y-m") ?>">
+        </div>
         <br>
         <a href="javascript:window.print()" role="button" class="btn btn-outline-info d-print-none">Drucken</a>
         <h1 class="display-1 text-info d-print-none">Verbrauchsliste</h1>
