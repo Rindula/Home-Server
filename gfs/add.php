@@ -9,9 +9,9 @@
 </head>
 <body class="container text-center">
     <form action="query.php?type=add" class="form" method="post">
-        <input placeholder="Bezeichnung" type="text" autofocus name="bez" id="bez"><br><br>
-        <input placeholder="Author" type="text" autofocus name="author" id="author"><br><br>
-        <select name="genre" id="genre">
+        <input class="form-control" placeholder="Bezeichnung" type="text" autofocus name="bez" id="bez"><br><br>
+        <input class="form-control" placeholder="Author" type="text" autofocus name="author" id="author"><br><br>
+        <select class="form-control" name="genre" id="genre">
             <?php
             require "connection.php";
 
@@ -21,8 +21,8 @@
             }
             ?>
         </select><br><br>
-        <input placeholder="ISBN (0123456789)" type="text" name="code" id="code"><br><br>
-        <input type="submit" value="Hinzufügen">
+        <input class="form-control" placeholder="ISBN (0123456789)" type="text" name="code" id="code"><br><br>
+        <input class="btn btn-success" type="submit" value="Hinzufügen">
     </form>
 </body>
 </html>

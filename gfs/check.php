@@ -9,8 +9,8 @@
 </head>
 <body class="container text-center">
     <form action="query.php?type=get" method="post">
-        <input type="text" autofocus name="code" id="code"><br><br>
-        <input type="submit" value="Einlesen">
+        <input class="form-control" type="text" autofocus name="code" id="code"><br><br>
+        <input class="btn btn-success" type="submit" value="Einlesen">
     </form>
 </body>
 </html>

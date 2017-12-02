@@ -9,9 +9,9 @@
 </head>
 <body class="container text-center">
     <form action="query.php?type=lent" method="post">
-        <input type="text" autofocus name="name" id="name"><br><br>
-        <input type="hidden" name="id" value="<?= $_GET["id"] ?>">
-        <input type="submit" value="Ausleihen">
+        <input class="form-control" type="text" autofocus name="name" id="name"><br><br>
+        <input class="form-control" type="hidden" name="id" value="<?= $_GET["id"] ?>">
+        <input class="btn btn-outline-success" type="submit" value="Ausleihen">
     </form>
 </body>
 </html>
