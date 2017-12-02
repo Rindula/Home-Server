@@ -8,8 +8,8 @@
     <title>Ausleihen | Name eingeben</title>
 
     <script>
-        function search_title() {
-            var xhttp = new XMLHttpRequest(text);
+        function search_title(text) {
+            var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("list").innerHTML = xhttp.responseText;
