@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Ausleihe | Gegenstand hinzufügen</title>
 </head>
-<body class="container align-items-center">
+<body class="container text-center">
     <form action="query.php?type=add" class="form" method="post">
         <input placeholder="Bezeichnung" type="text" autofocus name="bez" id="bez"><br>
         <input placeholder="Author" type="text" autofocus name="author" id="author"><br>

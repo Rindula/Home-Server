@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Ausleihen | Name eingeben</title>
 </head>
-<body class="container align-items-center">
+<body class="container text-center">
     <form action="query.php?type=lent" method="post">
         <input type="text" autofocus name="name" id="name">
         <input type="hidden" name="id" value="<?= $_GET["id"] ?>">
