@@ -12,6 +12,7 @@ if ($t == "add") {
 
 if ($t == "addA") {
     $conn->query("INSERT INTO autoren (autor) VALUES ('".$conn->escape_string($_POST["autor"])."')");
+    header("Location: ./scan.php?type=add");
 }
 
 if($t == "get") {
