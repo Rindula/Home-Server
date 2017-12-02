@@ -10,6 +10,7 @@
     <script>
         function search_title() {
             var xhttp = new XMLHttpRequest();
+            var text = document.getElementById("titel").value;
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("list").innerHTML = xhttp.responseText;
@@ -20,6 +21,7 @@
         }
         function search_author() {
             var xhttp = new XMLHttpRequest();
+            var text = document.getElementById("autor").value;
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("list").innerHTML = xhttp.responseText;
@@ -37,9 +39,10 @@
         <input class="form-control" placeholder="ISBN" type="text" name="isbn" value="<?= $_GET["isbn"] ?>">
         <input class="btn btn-outline-success" type="submit" value="Ausleihen">
     </form>
+    <hr>
     <form action="" method="get">
-        <input type="search" name="title" oninput="search_title" id="title">
-        <input type="search" name="autor" oninput="search_author" id="autor">
+        <input placeholder="Titel" type="search" name="title" oninput="search_title()" id="title">
+        <input placeholder="Autor" type="search" name="autor" oninput="search_author()" id="autor">
         <hr>
         <div class="list-group" id="list"></div>
     </form>
