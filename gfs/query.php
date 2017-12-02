@@ -64,7 +64,7 @@ if($t == "searchA") {
         die();
     $r = $conn->query("SELECT b.bez, b.author, bes.code FROM bestand as b inner join beschreibung as bes on bes.id = b.id WHERE author LIKE '%$q%'");
     while ($res = $r->fetch_assoc()) {
-        echo "<span onclick=\"location.replace('?isbn=".$res["code"]."')\" class=\"list-group-item\">".$res["bez"]." (".$res["author"].")</span>";
+        echo "<span onclick=\"location.replace('?isbn=".$res["code"]."')\" class=\"list-group-item list-group-item-action\">".$res["bez"]." (".$res["author"].")</span>";
     }
     die();
 }
