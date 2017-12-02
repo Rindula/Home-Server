@@ -9,8 +9,7 @@
 
     <script>
         function search_title() {
-            var xhttp = new XMLHttpRequest();
-            var text = document.getElementById("titel").value;
+            var xhttp = new XMLHttpRequest(text);
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("list").innerHTML = xhttp.responseText;
@@ -19,9 +18,8 @@
             xhttp.open("GET", "query.php?type=searchT&q=" + text, true);
             xhttp.send();
         }
-        function search_author() {
+        function search_author(text) {
             var xhttp = new XMLHttpRequest();
-            var text = document.getElementById("autor").value;
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("list").innerHTML = xhttp.responseText;
@@ -41,8 +39,8 @@
     </form>
     <hr>
     <form action="" method="get">
-        <input placeholder="Titel" type="text" name="title" oninput="search_title()" id="title">
-        <input placeholder="Autor" type="text" name="autor" oninput="search_author()" id="autor">
+        <input placeholder="Titel" type="text" name="title" oninput="search_title(this.value)" id="title">
+        <input placeholder="Autor" type="text" name="autor" oninput="search_author(this.value)" id="autor">
         <hr>
         <div class="list-group" id="list"></div>
     </form>
