@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <title>Ausleihe</title>
 </head>
-<body>
+<body class="container">
     <a href="scan.php?type=scan">Ausleihen / Zurücknehmen</a><br>
     <a href="scan.php?type=add">Gegenstand registrieren</a>
     <hr>
-    <table>
+    <table class="table table-striped">
         <tr><th>Name</th><th>Genre</th><th>Verliehen an</th><th>Verliehen am</th></tr>
     <?php
     require "connection.php";

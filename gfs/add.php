@@ -20,7 +20,7 @@
             }
             ?>
         </select><br>
-        <input placeholder="Code (0123456789)" type="text" name="code" id="code"><br>
+        <input placeholder="ISBN (0123456789)" type="text" name="code" id="code"><br>
         <input type="submit" value="Hinzufügen">
     </form>
 </body>
