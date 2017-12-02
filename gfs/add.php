@@ -10,11 +10,18 @@
 <body class="container text-center">
     <form action="query.php?type=add" class="form" method="post">
         <input class="form-control" placeholder="Bezeichnung" type="text" autofocus name="bez" id="bez"><br><br>
-        <input class="form-control" placeholder="Author" type="text" autofocus name="author" id="author"><br><br>
-        <select class="form-control" name="genre" id="genre">
+        <select class="form-control" name="author" id="author">
             <?php
             require "connection.php";
 
+            $r = $conn->query("SELECT * FROM autoren");
+            while($a = $r->fetch_assoc()) {
+                echo "<option value='".$a["id"]."'>".$a["autor"]."</option>";
+            }
+            ?>
+        </select><br><br>
+        <select class="form-control" name="genre" id="genre">
+            <?php
             $r = $conn->query("SELECT * FROM genre");
             while($a = $r->fetch_assoc()) {
                 echo "<option value='".$a["id"]."'>".$a["genre"]."</option>";
