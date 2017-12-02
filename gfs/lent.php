@@ -39,6 +39,7 @@
     </form>
     <hr>
     <form action="" method="get">
+        <h3>Suchen nach:</h3>
         <input placeholder="Titel" type="text" name="title" oninput="search_title(this.value)" id="title">
         <input placeholder="Autor" type="text" name="autor" oninput="search_author(this.value)" id="autor">
         <hr>
