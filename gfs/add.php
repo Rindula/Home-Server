@@ -35,7 +35,7 @@
     </form>
     <hr>
     <form action="query.php?type=addA" method="post">
-        <input type="text" name="autor" id="autor">
+        <input type="text" name="autor" id="autor"><br><br>
         <input class="btn btn-success" type="submit" value="Autor Hinzufügen">
     </form>
 </body>
