@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Ausleihe | Gegenstand hinzufügen</title>
 </head>
-<body>
-    <form action="query.php?type=add" method="post">
+<body class="container">
+    <form action="query.php?type=add" class="form" method="post">
         <input placeholder="Bezeichnung" type="text" autofocus name="bez" id="bez"><br>
         <input placeholder="Author" type="text" autofocus name="author" id="author"><br>
         <select name="genre" id="genre">
