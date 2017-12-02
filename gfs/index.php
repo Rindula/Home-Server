@@ -8,8 +8,8 @@
     <title>Ausleihe</title>
 </head>
 <body class="container text-center">
-    <a class="btn btn-block" href="scan.php?type=scan">Ausleihen / Zurücknehmen</a><br>
-    <a class="btn btn-block" href="scan.php?type=add">Gegenstand registrieren</a>
+    <a class="btn btn-block btn-primary" href="scan.php?type=scan">Ausleihen / Zurücknehmen</a>
+    <a class="btn btn-block btn-secondary" href="scan.php?type=add">Gegenstand registrieren</a>
     <hr>
     <table class="table table-striped">
         <tr><th>Name</th><th>Autor</th><th>Genre</th><th>Verliehen an</th><th>Verliehen am</th></tr>
