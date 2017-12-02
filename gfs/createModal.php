@@ -12,7 +12,7 @@
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
-      <button type="button" class="btn btn-primary">Bestätigen</button>
+      <a href="query.php?type=unlent&id=<?= $modalID ?>" class="btn btn-primary">Bestätigen</button>
     </div>
   </div>
 </div>
