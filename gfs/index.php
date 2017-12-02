@@ -15,11 +15,14 @@
         <tr><th>Name</th><th>Autor</th><th>Genre</th><th>Verliehen an</th><th>Verliehen am</th></tr>
     <?php
     require "connection.php";
-    $r = $conn->query("SELECT a.an, z.bez, a.timestamp, k.genre, ath.autor, b.code FROM ausgeliehen AS a INNER JOIN bestand AS z ON a.id = z.id INNER JOIN beschreibung AS b ON b.id = a.id INNER JOIN genre AS k ON b.genre = k.id INNER JOIN autoren AS ath ON ath.id = z.author");
+    $r = $conn->query("SELECT a.an, z.bez, a.timestamp, k.genre, ath.autor, b.id FROM ausgeliehen AS a INNER JOIN bestand AS z ON a.id = z.id INNER JOIN beschreibung AS b ON b.id = a.id INNER JOIN genre AS k ON b.genre = k.id INNER JOIN autoren AS ath ON ath.id = z.author");
     echo $conn->error;
     while ($a = $r->fetch_array()) {
         $t = date("d.m.Y", strtotime($a[2]));
         echo "<tr data-toggle=\"modal\" data-target=\"#".$a[5]."\"><td>".$a[1]."</td><td>".$a[4]."</td><td>".$a[3]."</td><td>".$a[0]."</td><td>".$t."</td></tr>";
+        $modalTitle = "Rücknahme bestätigen";
+        $modalBody = "Sind Sie sicher, dass sie das Buch als zurückgegeben markieren möchten?<br><b>Titel:</b> ".$a[1]."<br><b>Author:</b> ".$a[4]."<br><br><b>Verliehen an:</b> ".$a[0]."";
+        include "createModal.php";
     }
     ?>
     </table>
