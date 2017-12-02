@@ -19,9 +19,10 @@
     echo $conn->error;
     while ($a = $r->fetch_array()) {
         $t = date("d.m.Y", strtotime($a[2]));
-        echo "<tr data-toggle=\"modal\" data-target=\"#".$a[5]."\"><td>".$a[1]."</td><td>".$a[4]."</td><td>".$a[3]."</td><td>".$a[0]."</td><td>".$t."</td></tr>";
+        $modalID = $a[5];
         $modalTitle = "Rücknahme bestätigen";
         $modalBody = "Sind Sie sicher, dass sie das Buch als zurückgegeben markieren möchten?<br><b>Titel:</b> ".$a[1]."<br><b>Author:</b> ".$a[4]."<br><br><b>Verliehen an:</b> ".$a[0]."";
+        echo "<tr data-toggle=\"modal\" data-target=\"#$modalID\"><td>".$a[1]."</td><td>".$a[4]."</td><td>".$a[3]."</td><td>".$a[0]."</td><td>".$t."</td></tr>";
         include "createModal.php";
     }
     ?>
