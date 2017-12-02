@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Ausleihe | Check</title>
 </head>
-<body class="container text-center m-3">
+<body class="container text-center">
     <form action="query.php?type=get" method="post">
         <input type="text" autofocus name="code" id="code"><br><br>
         <input type="submit" value="Einlesen">

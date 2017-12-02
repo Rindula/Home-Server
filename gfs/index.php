@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Ausleihe</title>
 </head>
-<body class="container text-center m-3">
-    <a href="scan.php?type=scan">Ausleihen / Zurücknehmen</a><br>
-    <a href="scan.php?type=add">Gegenstand registrieren</a>
+<body class="container text-center">
+    <a class="btn btn-block" href="scan.php?type=scan">Ausleihen / Zurücknehmen</a><br>
+    <a class="btn btn-block" href="scan.php?type=add">Gegenstand registrieren</a>
     <hr>
     <table class="table table-striped">
         <tr><th>Name</th><th>Autor</th><th>Genre</th><th>Verliehen an</th><th>Verliehen am</th></tr>
