@@ -43,4 +43,21 @@ if($t == "lent") {
     }
 }
 
+if($t == "searchT") {
+    $q = $_GET["q"];
+    $r = $conn->query("SELECT * FROM bestand WHERE bez LIKE '%$q%'");
+    while ($res = $r->fetch_assoc()) {
+        echo "<span class=\"list-group-item\">".$res["bez"]." (".$r["author"].")</span>";
+    }
+    die();
+}
+if($t == "searchA") {
+    $q = $_GET["q"];
+    $r = $conn->query("SELECT * FROM bestand WHERE author LIKE '%$q%'");
+    while ($res = $r->fetch_assoc()) {
+        echo "<span class=\"list-group-item\">".$res["bez"]." (".$r["author"].")</span>";
+    }
+    die();
+}
+
 header("Location: ./");
