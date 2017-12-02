@@ -13,7 +13,7 @@
     <a class="btn btn-block btn-primary" href="lent.php">Ausleihen</a>
     <a class="btn btn-block btn-secondary" href="scan.php?type=add">Gegenstand registrieren</a>
     <hr>
-    <table class="table table-striped">
+    <table class="table table-striped table-hover">
         <tr><th>Name</th><th>Autor</th><th>Genre</th><th>Verliehen an</th><th>Verliehen am</th></tr>
     <?php
     require "connection.php";
@@ -21,10 +21,11 @@
     echo $conn->error;
     while ($a = $r->fetch_array()) {
         $t = date("d.m.Y", strtotime($a[2]));
+        $receiver = $a[1];
         $modalID = $a[5];
         $modalTitle = "Rücknahme bestätigen";
         $modalBody = "Sind Sie sicher, dass sie das Buch als zurückgegeben markieren möchten?<br><b>Titel:</b> ".$a[1]."<br><b>Author:</b> ".$a[4]."<br><br><b>Verliehen an:</b> ".$a[0]."";
-        echo "<tr data-toggle=\"modal\" data-target=\"#$modalID\"><td>".$a[1]."</td><td>".$a[4]."</td><td>".$a[3]."</td><td>".$a[0]."</td><td>".$t."</td></tr>";
+        echo "<tr data-toggle=\"modal\" data-target=\"#$modalID\"><td>".$receiver."</td><td>".$a[4]."</td><td>".$a[3]."</td><td>".$a[0]."</td><td>".$t."</td></tr>";
         include "createModal.php";
     }
     ?>
