@@ -9,8 +9,9 @@
 </head>
 <body class="container text-center">
     <form action="query.php?type=add" class="form" method="post">
-        <input class="form-control" placeholder="Bezeichnung" type="text" autofocus name="bez" id="bez"><br><br>
+        <input class="form-control" placeholder="Titel" type="text" autofocus name="bez" id="bez"><br><br>
         <select class="form-control" name="author" id="author">
+            <option value="" disabled>--- Bitte auswählen ---</option>
             <?php
             require "connection.php";
 
@@ -21,6 +22,7 @@
             ?>
         </select><br><br>
         <select class="form-control" name="genre" id="genre">
+            <option value="" disabled>--- Bitte auswählen ---</option>
             <?php
             $r = $conn->query("SELECT * FROM genre");
             while($a = $r->fetch_assoc()) {
@@ -30,6 +32,11 @@
         </select><br><br>
         <input class="form-control" placeholder="ISBN (0123456789)" type="text" name="code" id="code" value="<?= $_GET["isbn"] ?>"><br><br>
         <input class="btn btn-success" type="submit" value="Hinzufügen">
+    </form>
+    <hr>
+    <form action="query.php?type=addA" method="post">
+        <input type="text" name="autor" id="autor">
+        <input class="btn btn-success" type="submit" value="Autor Hinzufügen">
     </form>
 </body>
 </html>

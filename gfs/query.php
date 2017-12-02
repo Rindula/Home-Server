@@ -10,6 +10,10 @@ if ($t == "add") {
     $conn->query("INSERT INTO beschreibung (id, code, genre) VALUES ('$id', '".$conn->escape_string($_POST["code"])."', '".$conn->escape_string($_POST["genre"])."');");
 }
 
+if ($t == "addA") {
+    $conn->query("INSERT INTO autoren (autor) VALUES ('".$conn->escape_string($_POST["autor"])."')");
+}
+
 if($t == "get") {
     $c = $conn->escape_string($_POST["code"]);
 
