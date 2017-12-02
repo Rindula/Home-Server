@@ -44,8 +44,9 @@ if($t == "lent") {
 }
 
 if($t == "unlent") {
-    $i = $conn->escape_string($_POST["id"]);
-    $conn->query("DELETE FROM ausgeliehen WHERE id = '$i'");
+    $i = $conn->escape_string($_GET["id"]);
+    $to = $conn->escape_string($_GET["to"]);
+    $conn->query("DELETE FROM ausgeliehen WHERE id = '$i' AND an = '$to'");
 }
 
 if($t == "searchT") {
