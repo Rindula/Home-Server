@@ -9,7 +9,7 @@
 </head>
 <body class="container text-center">
     <form action="query.php?type=lent" method="post">
-        <input type="text" autofocus name="name" id="name">
+        <input type="text" autofocus name="name" id="name"><br><br>
         <input type="hidden" name="id" value="<?= $_GET["id"] ?>">
         <input type="submit" value="Ausleihen">
     </form>
