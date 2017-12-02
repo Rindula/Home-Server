@@ -41,8 +41,8 @@
     </form>
     <hr>
     <form action="" method="get">
-        <input placeholder="Titel" type="search" name="title" oninput="search_title()" id="title">
-        <input placeholder="Autor" type="search" name="autor" oninput="search_author()" id="autor">
+        <input placeholder="Titel" type="text" name="title" oninput="search_title()" id="title">
+        <input placeholder="Autor" type="text" name="autor" oninput="search_author()" id="autor">
         <hr>
         <div class="list-group" id="list"></div>
     </form>
