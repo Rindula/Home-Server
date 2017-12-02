@@ -9,8 +9,8 @@
 </head>
 <body class="container text-center">
     <form action="query.php?type=lent" method="post">
-        <input class="form-control" placeholder="Name" type="text" autofocus name="name" id="name"><br><br>
-        <input class="form-control" type="hidden" name="id" value="<?= $_GET["id"] ?>">
+        <input class="form-control" placeholder="Name" type="text" autofocus name="name" id="name">
+        <input class="form-control" placeholder="ISBN" type="text" name="isbn">
         <input class="btn btn-outline-success" type="submit" value="Ausleihen">
     </form>
 </body>

@@ -30,10 +30,17 @@ if($t == "get") {
 }
 
 if($t == "lent") {
-    $i = $conn->escape_string($_POST["id"]);
+    $i = $conn->escape_string($_POST["isbn"]);
     $p = $conn->escape_string($_POST["name"]);
 
-    $conn->query("INSERT INTO ausgeliehen (id, an) VALUES ('$i', '$p')");
+    $r = $conn->query("SELECT id FROM beschreibung WHERE code = '$i'");
+    if($r->num_rows > 0) {
+        $id = $r->fetch_array();
+        $id = $id[0];
+        $conn->query("INSERT INTO ausgeliehen (id, an) VALUES ('$id', '$p')");
+    } else {
+        header("Location: ./scan.php?type=add&isbn=$i");
+    }
 }
 
 header("Location: ./");
