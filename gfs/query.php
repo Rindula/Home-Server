@@ -47,9 +47,9 @@ if($t == "searchT") {
     $q = $_GET["q"];
     if (trim($q) == "")
         die();
-    $r = $conn->query("SELECT * FROM bestand WHERE bez LIKE '%$q%'");
+    $r = $conn->query("SELECT b.bez, b.author, bes.code FROM bestand as b inner join beschreibung as bes on bes.id = b.id WHERE author LIKE '%$q%'");
     while ($res = $r->fetch_assoc()) {
-        echo "<span class=\"list-group-item\">".$res["bez"]." (".$res["author"].")</span>";
+        echo "<a href=\"?isbn=".$res["code"]."\" class=\"list-group-item\">".$res["bez"]." (".$res["author"].")</a>";
     }
     die();
 }
@@ -59,7 +59,7 @@ if($t == "searchA") {
         die();
     $r = $conn->query("SELECT b.bez, b.author, bes.code FROM bestand as b inner join beschreibung as bes on bes.id = b.id WHERE author LIKE '%$q%'");
     while ($res = $r->fetch_assoc()) {
-        echo "<a href=\"?isbn\" class=\"list-group-item\">".$res["bez"]." (".$res["author"].")</a>";
+        echo "<a href=\"?isbn=".$res["code"]."\" class=\"list-group-item\">".$res["bez"]." (".$res["author"].")</a>";
     }
     die();
 }
