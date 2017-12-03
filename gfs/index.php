@@ -14,7 +14,10 @@
     <a class="btn btn-block btn-secondary" href="scan.php?type=add">Gegenstand registrieren</a>
     <hr>
     <table class="table table-striped table-hover">
-        <tr><th>Name</th><th>Autor</th><th>Genre</th><th>Verliehen an</th><th>Verliehen am</th></tr>
+        <thead>
+            <tr><th>Name</th><th>Autor</th><th>Genre</th><th>Verliehen an</th><th>Verliehen am</th></tr>
+        </thead>
+        <tbody>
     <?php
     require "connection.php";
     $r = $conn->query("SELECT a.an, z.bez, a.timestamp, k.genre, ath.autor, b.id FROM ausgeliehen AS a INNER JOIN bestand AS z ON a.id = z.id INNER JOIN beschreibung AS b ON b.id = a.id INNER JOIN genre AS k ON b.genre = k.id INNER JOIN autoren AS ath ON ath.id = z.author");
@@ -29,6 +32,7 @@
         include "createModal.php";
     }
     ?>
+        </tbody>
     </table>
     <script src="js/bootstrap.js"></script>
 </body>
