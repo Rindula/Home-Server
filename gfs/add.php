@@ -11,7 +11,7 @@
     <form action="query.php?type=add" class="form" method="post">
         <input class="form-control" placeholder="Titel" type="text" autofocus name="bez" id="bez"><br><br>
         <select class="form-control" name="author" id="author">
-            <option value="" disabled>--- Bitte auswählen ---</option>
+            <option selected value="" disabled>--- Bitte auswählen ---</option>
             <?php
             require "connection.php";
 
@@ -22,7 +22,7 @@
             ?>
         </select><br><br>
         <select class="form-control" name="genre" id="genre">
-            <option value="" disabled>--- Bitte auswählen ---</option>
+            <option selected value="" disabled>--- Bitte auswählen ---</option>
             <?php
             $r = $conn->query("SELECT * FROM genre");
             while($a = $r->fetch_assoc()) {
