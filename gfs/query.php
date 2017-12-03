@@ -60,7 +60,7 @@ if($t == "searchT") {
         die();
     $r = $conn->query("SELECT b.bez, a.autor, bes.code FROM bestand as b inner join beschreibung as bes on bes.id = b.id inner join autoren as a on a.id = b.author WHERE b.bez LIKE '%$q%'");
     while ($res = $r->fetch_assoc()) {
-        echo "<span onclick=\"location.replace('?isbn=".$res["code"]."')\" class=\"list-group-item list-group-item-action\">".$res["bez"]." (".$res["autor"].")</span>";
+        echo "<span onclick=\"document.getElementById('isbn').value = '".$res["code"]."'\" class=\"list-group-item list-group-item-action\">".$res["bez"]." (".$res["autor"].")</span>";
     }
     die();
 }
@@ -70,7 +70,7 @@ if($t == "searchA") {
         die();
         $r = $conn->query("SELECT b.bez, a.autor, bes.code FROM bestand as b inner join beschreibung as bes on bes.id = b.id inner join autoren as a on a.id = b.author WHERE a.autor LIKE '%$q%'");
     while ($res = $r->fetch_assoc()) {
-        echo "<span onclick=\"location.replace('?isbn=".$res["code"]."')\" class=\"list-group-item list-group-item-action\">".$res["bez"]." (".$res["autor"].")</span>";
+        echo "<span onclick=\"document.getElementById('isbn').value = '".$res["code"]."'\" class=\"list-group-item list-group-item-action\">".$res["bez"]." (".$res["autor"].")</span>";
     }
     die();
 }
