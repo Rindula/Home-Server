@@ -8,6 +8,7 @@
     <title>Ausleihe | Gegenstand hinzufügen</title>
 </head>
 <body class="container text-center">
+    <a class="m-3 btn btn-danger btn-block" href="./" type="reset">Zurück</a>
     <form action="query.php?type=add" class="form" method="post">
         <input class="form-control" placeholder="Titel" type="text" autofocus name="bez" id="bez"><br><br>
         <select class="form-control" name="author" id="author">

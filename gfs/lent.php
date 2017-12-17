@@ -7,31 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Ausleihen | Name eingeben</title>
 
-    <script>
-        function search_title(text) {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("list").innerHTML = xhttp.responseText;
-                }
-            };
-            xhttp.open("GET", "query.php?type=searchT&q=" + text, true);
-            xhttp.send();
-        }
-        function search_author(text) {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("list").innerHTML = xhttp.responseText;
-                }
-            };
-            xhttp.open("GET", "query.php?type=searchA&q=" + text, true);
-            xhttp.send();
-        }
-    </script>
+    <script src="js/fetch.js"></script>
 
 </head>
 <body class="container text-center">
+    <a class="m-3 btn btn-danger btn-block" href="./" type="reset">Zurück</a>
     <form action="query.php?type=lent" method="post">
         <input class="form-control" placeholder="Name" type="text" autofocus name="name" id="name">
         <input class="form-control" placeholder="ISBN" type="text" name="isbn" id="isbn">
