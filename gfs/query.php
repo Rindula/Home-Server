@@ -13,6 +13,7 @@ if ($t == "add") {
 if ($t == "addA") {
     $conn->query("INSERT INTO autoren (autor) VALUES ('".$conn->escape_string($_POST["autor"])."')");
     header("Location: ./scan.php?type=add");
+    die();
 }
 
 if($t == "get") {
@@ -68,7 +69,7 @@ if($t == "searchA") {
     $q = $_GET["q"];
     if (trim($q) == "")
         die();
-        $r = $conn->query("SELECT b.bez, a.autor, bes.code FROM bestand as b inner join beschreibung as bes on bes.id = b.id inner join autoren as a on a.id = b.author WHERE a.autor LIKE '%$q%'");
+    $r = $conn->query("SELECT b.bez, a.autor, bes.code FROM bestand as b inner join beschreibung as bes on bes.id = b.id inner join autoren as a on a.id = b.author WHERE a.autor LIKE '%$q%'");
     while ($res = $r->fetch_assoc()) {
         echo "<span onclick=\"document.getElementById('isbn').value = '".$res["code"]."'\" class=\"list-group-item list-group-item-action\">".$res["bez"]." (".$res["autor"].")</span>";
     }
