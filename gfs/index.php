@@ -20,7 +20,7 @@
         <tbody>
     <?php
     require "connection.php";
-    $r = $conn->query("SELECT a.an, z.bez, a.timestamp, k.genre, ath.autor, b.id FROM ausgeliehen AS a INNER JOIN bestand AS z ON a.id = z.id INNER JOIN beschreibung AS b ON b.id = a.id INNER JOIN genre AS k ON b.genre = k.id INNER JOIN autoren AS ath ON ath.id = z.author");
+    $r = $conn->query("SELECT a.an, z.bez, a.timestamp, k.genre, ath.autor, b.id FROM ausgeliehen AS a INNER JOIN bestand AS z ON a.id = z.id INNER JOIN beschreibung AS b ON b.id = a.id INNER JOIN genre AS k ON b.genre = k.id INNER JOIN autoren AS ath ON ath.id = z.author ORDER BY a.timestamp");
     echo $conn->error;
     while ($a = $r->fetch_array()) {
         $t = date("d.m.Y", strtotime($a[2]));
