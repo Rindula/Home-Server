@@ -9,7 +9,7 @@
     <script src="js/popper.js"></script>
     <title>Ausleihe</title>
 </head>
-<body class="container text-center">
+<body class="container text-center m-t-3">
     <a class="btn btn-block btn-primary" href="lent.php">Ausleihen</a>
     <a class="btn btn-block btn-secondary" href="scan.php?type=add">Gegenstand registrieren</a>
     <hr>
