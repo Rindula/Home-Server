@@ -31,7 +31,7 @@
             }
             ?>
         </select><br><br>
-        <input class="form-control" placeholder="ISBN (0123456789)" type="text" name="code" id="code" value="<?= $_GET["isbn"] ?>"><br><br>
+        <input class="form-control" placeholder="ISBN (0123456789)" type="text" name="code" id="code" value="<?= (isset($_GET["isbn"])) ? $_GET["isbn"] : "" ; ?>"><br><br>
         <input class="btn btn-success" type="submit" value="Hinzufügen">
     </form>
     <hr>
