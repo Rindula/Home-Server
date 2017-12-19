@@ -8,7 +8,7 @@ header('Cache-Control: no-cache');
     <link rel="stylesheet" href="style.css">
     <style id="styleing"></style>
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="scripts.js"></script>
+    <!-- <script src="scripts.js"></script> -->
     <script src="js/popper.js"></script>
 </head>
 
