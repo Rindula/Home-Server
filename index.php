@@ -7,9 +7,9 @@ header('Cache-Control: no-cache');
     <title>Dateispeicher</title>
     <link rel="stylesheet" href="style.css">
     <style id="styleing"></style>
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
     <!-- <script src="scripts.js"></script> -->
-    <script src="js/popper.js"></script>
+    <script src="/js/popper.js"></script>
 </head>
 
 <body>
@@ -21,13 +21,13 @@ header('Cache-Control: no-cache');
         </nav>
         <iframe name="content" id="content" src="content.php?sec=startseite" style="border: 0; width: 100%; overflow: hidden; height: 70%;">
 		</iframe>
-        <div id="footer" class="sticky-bottom">
+        <div id="footer" class="">
             <?php
             include 'footer.php';
             ?>
         </div>
     </div>
 </body>
-<script src="js/bootstrap.js"></script>
+<script src="/js/bootstrap.js"></script>
 
 </html>
