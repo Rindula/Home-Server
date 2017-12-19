@@ -9,7 +9,6 @@ header('Cache-Control: no-cache');
     <style id="styleing"></style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="scripts.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.js"></script>
 </head>
 
