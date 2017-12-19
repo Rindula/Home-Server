@@ -28,6 +28,6 @@ header('Cache-Control: no-cache');
         </div>
     </div>
 </body>
-<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="js/bootstrap.js"></script>
 
 </html>
