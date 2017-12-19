@@ -9,28 +9,26 @@ header('Cache-Control: no-cache');
     <style id="styleing"></style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="scripts.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="header" class="header">
-        </div>
-        <nav>
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <?php
             include 'menu.html';
             ?>
         </nav>
         <iframe name="content" id="content" src="content.php?sec=startseite" style="border: 0; width: 100%; overflow: hidden; height: 70%;">
 		</iframe>
-        <div id="footer" class="footer">
+        <div id="footer" class="sticky-bottom">
             <?php
             include 'footer.php';
             ?>
         </div>
     </div>
 </body>
-<script type="text/javascript">
-    page( "startseite" );
-</script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 
 </html>
