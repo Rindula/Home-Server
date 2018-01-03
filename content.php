@@ -36,6 +36,11 @@ switch ($_GET["sec"]) {
         include 'content/status.php';
         break;
 
+    case "kontakte":
+
+        include 'contacts/index.html';
+        break;
+
     case "test":
 
         //include 'upload/index.php';
