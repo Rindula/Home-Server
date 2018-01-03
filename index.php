@@ -8,7 +8,6 @@ header('Cache-Control: no-cache');
     <style id="styleing"></style>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
-    <script type="text/javascript" src="js/popper.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -28,6 +27,7 @@ header('Cache-Control: no-cache');
         </div>
     </div>
 </body>
+<script type="text/javascript" src="js/popper.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 
 </html>
