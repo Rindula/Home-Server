@@ -7,7 +7,7 @@
 
 
 include $_SERVER['DOCUMENT_ROOT'] . "/_hidden/vars.php";
-$mysqli = mysqli_connect("25.83.12.108", "root", $mySqlPassword, "myPasswords");
+$mysqli = mysqli_connect("localhost", "root", $mySqlPassword, "myPasswords");
 
 
 if (isset($_GET["id"])) {
