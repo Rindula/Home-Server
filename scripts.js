@@ -81,3 +81,11 @@ function muteOthers(e) {
 			}
 		}
 }
+
+$(document).ready(function() {
+	$("a.nav_link").click(function(){
+	  var link = $(this).attr('href');
+	  $("#content").src = link;
+	  return false;
+   });
+});
