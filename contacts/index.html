@@ -10,20 +10,6 @@
 	<meta http-equiv="pragma" content="no-cache" />
 	<title>Test</title>
 	<link href="dv.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript">
-		function query() {
-			name = document.getElementById("name").value;
-			out = document.getElementById("out");
-			var xhr = new XMLHttpRequest();
-			xhr.onreadystatechange = function () {
-				if (xhr.readyState == XMLHttpRequest.DONE) {
-					out.innerHTML = xhr.responseText;
-				}
-			}
-			xhr.open('GET', '/contacts/process.php?q=' + name, true);
-			xhr.send(null);
-		}
-	</script>
 </head>
 
 <body>

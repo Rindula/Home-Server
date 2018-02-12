@@ -10,6 +10,19 @@ function load(v) {
 	xhttpPasswords.send();
 }
 
+function query() {
+	name = document.getElementById("name").value;
+	out = document.getElementById("out");
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState == XMLHttpRequest.DONE) {
+			out.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.open('GET', '/contacts/process.php?q=' + name, true);
+	xhr.send(null);
+}
+
 function copyToPaste(id) {
 	document.getElementById(id).select();
 
