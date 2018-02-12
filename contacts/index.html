@@ -20,7 +20,7 @@
 					out.innerHTML = xhr.responseText;
 				}
 			}
-			xhr.open('GET', 'process.php?q=' + name, true);
+			xhr.open('GET', '/contacts/process.php?q=' + name, true);
 			xhr.send(null);
 		}
 	</script>
