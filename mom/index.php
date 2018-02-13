@@ -1,5 +1,5 @@
 <form action="" method="get">
-    <input type="number" placeholder="Anzahl" name="limit" id="limit" min="0">
+    <input type="number" placeholder="Anzahl" name="limit" value="<?= $_GET["limit"] ?>" id="limit" min="0">
     <button type="submit">Zufällige auswählen</button>
 </form>
 
