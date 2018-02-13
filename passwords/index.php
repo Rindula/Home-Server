@@ -234,7 +234,7 @@ if (isset($_POST['user']) && isset($_POST['service'])) {
             $img = $ar["account"];
 
             if (substr($img, 0, 4) === "http") {
-                $ending = substr(strrchr(substr(strrchr($img, "/"), 1), "."), 1);
+                $ending = explode('?', substr(strrchr(substr(strrchr($img, "/"), 1), "."), 1))[0];
                 if ($ending == "") {
                     $ending = "png";
                 }
