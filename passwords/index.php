@@ -150,7 +150,7 @@ if (isset($_POST['user']) && isset($_POST['service'])) {
         };
         var now = new Date();
         now.setTime(now.getTime() + 100 * 365 * 24 * 3600 * 1000);
-        document.cookie = "menustate=opened; expires=" + now.toUTCString() + "; path=/?section=passwörter";
+        document.cookie = "menustate=opened; expires=" + now.toUTCString() + "; path=/passwords";
     }
 
     /* Set the width of the side navigation to 0 */
@@ -163,7 +163,7 @@ if (isset($_POST['user']) && isset($_POST['service'])) {
         };
         var now = new Date();
         now.setTime(now.getTime() + 100 * 365 * 24 * 3600 * 1000);
-        document.cookie = "menustate=closed; expires=" + now.toUTCString() + "; path=/?section=passwörter";
+        document.cookie = "menustate=closed; expires=" + now.toUTCString() + "; path=/passwords";
     }
 
     function getCookie(cname) {
@@ -252,7 +252,7 @@ if (isset($_POST['user']) && isset($_POST['service'])) {
                             echo "<input id='image_update_$id'><button onclick='updater(\"image_update_$id\", \"$id\")'>Bild erneuern</button>";
                             $noUrl++;
                         } else {
-                            echo "<img id='preview_small_image_$id' src='$img' /><h2>$service <button data-tooltip='Bild entfernen' onclick='resetter(\"$id\")' style='background-color: red; color: white; font-weight: bold;'>#</button></h2>";
+                            echo "<img id='preview_small_image_$id' src='$img' onclick='resetter(\"$id\")' data-tooltip='Bild entfernen' /><h2>$service</h2>";
                         }
                         ?>
                     </div>
@@ -271,7 +271,7 @@ if (isset($_POST['user']) && isset($_POST['service'])) {
         }
         if ($reload) {
             ?>
-            <script>window.location.replace("/?section=passwörter")</script>
+            <script>window.location.replace("/passwords")</script>
             <?php
         }
         echo "<p>Es fehlen <b>$noUrl</b> Iconbilder</p>"
