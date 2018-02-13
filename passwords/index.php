@@ -136,7 +136,7 @@ if (isset($_POST['user']) && isset($_POST['service'])) {
     }
 
     function resetter(id) {
-        var link = document.getElementById("preview_small_image_" + id).src.substr(13);
+        var link = document.getElementById("preview_small_image_" + id).src.substr(18);
 
         window.location.replace("/_hidden/imgUpdate.php?id=" + id + "&link=" + link + "&delete");
     }
