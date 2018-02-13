@@ -10,6 +10,7 @@ if(isset($_GET["limit"]) && !empty($_GET["limit"])) {
     $result = $mysqli->query("Select b.name as 'Titel', b.hoehe as 'Höhe',b.breite as 'Breite',t.name as 'Technik',k.name as 'Kategorie' from Bilder as b inner join Techniken as t on b.technik = t.id inner join Kategorien as k on b.kategorie = k.id order by b.name");
 }
 echo "<table border=\"1\">";
+echo "<tr><th>Titel</th><th>Maße</th><th>Technik</th><th>Kategorie</th></tr>";
 while ($ar = $result->fetch_assoc()) {
     echo "<tr><td>".$ar["Titel"]."</td><td>".$ar["Höhe"]." x ".$ar["Breite"]."</td><td>".$ar["Technik"]."</td><td>".$ar["Kategorie"]."</td></tr>";
 }
