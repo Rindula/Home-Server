@@ -239,8 +239,9 @@ if (isset($_POST['user']) && isset($_POST['service'])) {
                     $ending = "png";
                 }
                 $imgSave = 'img/icons/' . $service . '.' . $ending;
-                file_put_contents($imgSave, file_get_contents($img));
+                file_put_contents($imgSave, fopen($img, "r"));
                 $mysqli->query("UPDATE list SET account='/img/icons/$service.$ending' WHERE ID=$id");
+                
                 $reload = true;
             } else {
                 ?>
