@@ -17,5 +17,5 @@
 		$conn->query("UPDATE list SET account='$value' WHERE ID='$id'");
 	}
 	
-	echo '<script>window.location.replace("/?section=passwörter")</script>';
+	echo '<script>window.location.replace("/passwords")</script>';
 ?>
