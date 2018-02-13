@@ -96,9 +96,9 @@ function muteOthers(e) {
 }
 
 $(document).ready(function() {
-	$("a.nav_link").click(function(){
+	$("a").click(function(){
 	  var link = $(this).attr('href');
-	  $("#content").src = link;
+	  $("#content").attr("src", link);
 	  return false;
    });
 });
