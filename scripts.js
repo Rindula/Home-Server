@@ -98,6 +98,7 @@ function muteOthers(e) {
 $(document).ready(function() {
 	$("a.nav-link:not(.dropdown-toggle), a.dropdown-item").click(function(){
 	  var link = $(this).attr('href');
+	  $(this).toggle();
 	  $("#content").attr("src", link);
 	  return false;
    });
