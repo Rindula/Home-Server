@@ -1,5 +1,5 @@
 <form action="" method="get">
-    <input type="number" name="limit" id="limit" min="0">
+    <input type="number" placeholder="Anzahl" name="limit" id="limit" min="0">
     <button type="submit">Zufällige auswählen</button>
 </form>
 
