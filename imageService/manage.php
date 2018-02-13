@@ -20,7 +20,7 @@ $uploaddir = $_SERVER['DOCUMENT_ROOT'] . '/imageService/uploads/';
 $filename = random_string(100) . "." . pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
 $uploadfile = $uploaddir . $filename;
 
-$conn = new mysqli("25.83.12.108",  "root", "SiSal2002", "images");
+$conn = new mysqli("localhost",  "root", "SiSal2002", "images");
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

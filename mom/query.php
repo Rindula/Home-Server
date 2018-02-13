@@ -1,6 +1,6 @@
 <?php
 // Zu Datenbank verbinden
-$mysqli = new mysqli("25.83.12.108", "root", "SiSal2002");
+$mysqli = new mysqli("localhost", "root", "SiSal2002");
 $mysqli->set_charset("utf8");
 
 // Sprache einstellen

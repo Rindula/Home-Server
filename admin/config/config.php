@@ -1,6 +1,6 @@
 <?php
 
-define('DATABASE_IP', '25.83.12.108');
+define('DATABASE_IP', 'localhost');
 define('DATABASE_USER', 'root');
 define('DATABASE_PASS', 'SiSal2002');
 define('DATABASE_DATABASE', 'test');

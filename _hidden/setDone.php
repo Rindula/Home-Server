@@ -6,7 +6,7 @@
 
 
 	// Datenbankverbindung herstellen
-    mysql_connect("25.83.12.108", "root", $mySqlPassword);
+    mysql_connect("localhost", "root", $mySqlPassword);
 	// Datenbank und Tabelle erstellen, falls noch nicht vorhanden
 	mysql_query("CREATE DATABASE IF NOT EXISTS homeworks");
 	// Datenbank auswählen

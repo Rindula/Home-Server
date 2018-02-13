@@ -35,7 +35,7 @@
                 </tr>
             </thead>
             <?php
-            $db_link = mysqli_connect("25.83.12.108", "root", "SiSal2002", "terminkalender");
+            $db_link = mysqli_connect("localhost", "root", "SiSal2002", "terminkalender");
 
             $monat = date("n");
             $jahr = date("Y");

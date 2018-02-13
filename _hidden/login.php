@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include "vars.php";
-$pdo = new PDO('mysql:host=25.83.12.108;dbname=stats', 'root', $mySqlPassword);
+$pdo = new PDO('mysql:host=localhost;dbname=stats', 'root', $mySqlPassword);
  
 if(isset($_GET['login'])) {
  $name = $_POST['name'];

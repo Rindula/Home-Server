@@ -1,7 +1,7 @@
 <?php
 
 $t = $_GET["type"];
-$conn = new mysqli("25.83.12.108", "root", "SiSal2002", "etiketten");
+$conn = new mysqli("localhost", "root", "SiSal2002", "etiketten");
 
 if ($t == "add") {
     $conn->query("INSERT INTO zeug (bez) VALUES ('".$conn->escape_string($_POST["bez"])."')");

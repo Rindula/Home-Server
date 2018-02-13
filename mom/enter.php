@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("25.83.12.108", "root", "SiSal2002", "mom");
+$mysqli = new mysqli("localhost", "root", "SiSal2002", "mom");
 $mysqli->set_charset("utf8");
 ?>
 <head>
