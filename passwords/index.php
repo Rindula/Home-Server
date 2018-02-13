@@ -271,7 +271,7 @@ if (isset($_POST['user']) && isset($_POST['service'])) {
         }
         if ($reload) {
             ?>
-            <script>window.location.replace("/")</script>
+            <script>window.location.replace("/passwords")</script>
             <?php
         }
         echo "<p>Es fehlen <b>$noUrl</b> Iconbilder</p>"
