@@ -5,7 +5,7 @@ $title = "Passwords";
 include "../_hidden/vars.php";
 // include "../_hidden/verify.php";
 // Datenbankverbindung herstellen
-$mysqli = mysqli_connect("25.83.12.108", "root", $mySqlPassword, "myPasswords");
+$mysqli = mysqli_connect("localhost", "root", $mySqlPassword, "myPasswords");
 $queryCreateUsersTable = "CREATE TABLE IF NOT EXISTS `list` ( `ID` INT NOT NULL AUTO_INCREMENT , `service` TEXT NOT NULL DEFAULT '' , `user` TEXT NOT NULL DEFAULT '' , `passwort` TEXT NOT NULL DEFAULT '' , `account` TEXT NOT NULL DEFAULT '' , PRIMARY KEY (`ID`)) ENGINE = InnoDB;";
 $mysqli->query($queryCreateUsersTable);
 
