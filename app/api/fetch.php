@@ -5,7 +5,7 @@ $dbname = "appNews";
 $dbuser = "root";
 $dbpass = "SiSal2002";
 
-$mysql = new mysqli($dbhost, $dbname, $dbuser, $dbpass);
+$mysql = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
 $ret = $mysql->query("SELECT * FROM news WHERE newsDate BETWEEN now() AND DATE_ADD(NOW(), INTERVAL 14 DAY)");
 while ($r = $ret->fetch_assoc()) {
