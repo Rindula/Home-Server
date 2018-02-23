@@ -28,6 +28,28 @@ switch ($type) {
             echo "<li class='".(($r["done"] == 1) ? "checked" : "")."'>".$r["entry"]."</li>";
         }
         break;
+
+    case 'done':
+        if (empty($_GET["v"]) || empty($_GET["v2"])) {
+            http_response_code(400);
+            die();
+        }
+        $value = $mysql->real_escape_string($_GET["v"]);
+        $value2 = $mysql->real_escape_string($_GET["v2"]);
+
+        $mysql->query("UPDATE list SET done = $value WHERE entry = '$value2'");
+        break;
+
+    case 'delete':
+        if (empty($_GET["v"])) {
+            http_response_code(400);
+            die();
+        }
+        $value = $mysql->real_escape_string($_GET["v"]);
+
+        $mysql->query("DELETE FROM list WHERE entry = '$value'");
+        break;
+        
     default:
         http_response_code(501);
         die();

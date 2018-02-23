@@ -167,6 +167,10 @@
                 close[i].onclick = function () {
                     var div = this.parentElement;
                     div.style.display = "none";
+                    
+                    var closer = new XMLHttpRequest();
+                    closer.open("GET", "process.php?t=delete&v=" + this.parentElement.innerHTML, true);
+                    closer.send();
                 }
             }
 
@@ -175,6 +179,13 @@
             list.addEventListener('click', function (ev) {
                 if (ev.target.tagName === 'LI') {
                     ev.target.classList.toggle('checked');
+                    var updater = new XMLHttpRequest();
+                    if (ev.target.classList.contains("checked")) {
+                        updater.open("GET", "process.php?t=done&v=1&v2=" + ev.target.innerHTML, true);
+                    } else {
+                        updater.open("GET", "process.php?t=done&v=0&v2=" + ev.target.innerHTML, true);
+                    }
+                    updater.send()
                 }
             }, false);
 
