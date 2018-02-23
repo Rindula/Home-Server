@@ -167,7 +167,7 @@
                 close[i].onclick = function () {
                     var div = this.parentElement;
                     div.style.display = "none";
-                    
+
                     var closer = new XMLHttpRequest();
                     closer.open("GET", "process.php?t=delete&v=" + this.parentElement.getAttribute("database-id"), true);
                     closer.send();
@@ -213,14 +213,20 @@
             xhttp.open("GET", "process.php?t=enter&v=" + inputValue, true);
             xhttp.send();
         }
+
+        function checkKey() {
+            if (event.keyCode === 13) {
+                document.getElementById("submitButton").click();
+            }
+        }
     </script>
 </head>
 
 <body onload="init()">
     <div id="myDIV" class="header">
         <h2>Meine ToDo-Liste</h2>
-        <input type="text" id="myInput" onsubmit="newElement()" placeholder="Title...">
-        <span onclick="newElement()" class="addBtn">Add</span>
+        <input type="text" id="myInput" onkeyup="checkKey()" placeholder="Title...">
+        <span onclick="newElement()" id="submitButton" class="addBtn">Add</span>
     </div>
 
     <ul id="myUL"></ul>
