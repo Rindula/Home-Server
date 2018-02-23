@@ -12,7 +12,7 @@ $mysql = new mysqli("localhost", "root", "SiSal2002", "todo");
 
 switch ($type) {
     case 'enter':
-        if (empty($_GET["v"])) {
+        if (!isset($_GET["v"])) {
             http_response_code(400);
             die();
         }
@@ -30,7 +30,7 @@ switch ($type) {
         break;
 
     case 'done':
-        if (empty($_GET["v"]) || empty($_GET["v2"])) {
+        if (!isset($_GET["v"]) || !isset($_GET["v2"])) {
             http_response_code(400);
             die();
         }
@@ -41,7 +41,7 @@ switch ($type) {
         break;
 
     case 'delete':
-        if (empty($_GET["v"])) {
+        if (!isset($_GET["v"])) {
             http_response_code(400);
             die();
         }
