@@ -144,7 +144,7 @@
                     document.getElementById("myUL").innerHTML = "<h1>Es ist ein Fehler aufgetreten!</h1><h2>Fehlercode " + this.status + "</h2>";
                 }
             };
-            xhttp.open("GET", "show.php?t=list", true);
+            xhttp.open("GET", "process.php?t=list", true);
             xhttp.send();
         }
 
@@ -199,7 +199,7 @@
                     alert("Es ist ein Fehler aufgetreten! Fehlercode " + this.status);
                 }
             };
-            xhttp.open("GET", "show.php?t=enter&v=" + inputValue, true);
+            xhttp.open("GET", "process.php?t=enter&v=" + inputValue, true);
             xhttp.send();
         }
     </script>
