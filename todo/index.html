@@ -169,7 +169,7 @@
                     div.style.display = "none";
                     
                     var closer = new XMLHttpRequest();
-                    closer.open("GET", "process.php?t=delete&v=" + this.parentElement.innerHTML, true);
+                    closer.open("GET", "process.php?t=delete&v=" + this.parentElement.getAttribute("database-id"), true);
                     closer.send();
                 }
             }
@@ -181,9 +181,9 @@
                     ev.target.classList.toggle('checked');
                     var updater = new XMLHttpRequest();
                     if (ev.target.classList.contains("checked")) {
-                        updater.open("GET", "process.php?t=done&v=1&v2=" + ev.target.innerHTML, true);
+                        updater.open("GET", "process.php?t=done&v=1&v2=" + ev.target.getAttribute("database-id"), true);
                     } else {
-                        updater.open("GET", "process.php?t=done&v=0&v2=" + ev.target.innerHTML, true);
+                        updater.open("GET", "process.php?t=done&v=0&v2=" + ev.target.getAttribute("database-id"), true);
                     }
                     updater.send()
                 }

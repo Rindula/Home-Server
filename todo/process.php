@@ -25,7 +25,7 @@ switch ($type) {
     case 'list':
         $res = $mysql->query("SELECT * FROM list");
         while ($r = $res->fetch_assoc()) {
-            echo "<li class='".(($r["done"] == 1) ? "checked" : "")."'>".$r["entry"]."</li>";
+            echo "<li database-id='".$r["entry"]."' class='".(($r["done"] == 1) ? "checked" : "")."'>".$r["entry"]."</li>";
         }
         break;
 
