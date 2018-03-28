@@ -23,11 +23,14 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img src="kerze.jpg" alt=""/>
+                                    <div style="height: 145mm;">
+                                        <img style="max-width: 100mm;" src="title.png" alt=""/>
+                                    </div>
                                 </td>
                                 <td>
                                     <h1>Einladung</h1>
                                     <h2>zur Geburtstagsparty</h2>
+                                    <h3>Ich werde 18</h3>
                                 </td>
                             </tr>
                         </table>
@@ -38,19 +41,26 @@
                         <table>
                             <tr>
                                 <td>
-                                    <h1>DU BIST EINGELADEN<br><?= $name ?></h1>
-                                    <h2>Mitzubringen sind:</h2>
-                                    <ul>
-                                        <li>Sachen zum Zelten</li>
-                                        <li>Laptop</li>
-                                        <li>Spaß</li>
-                                    </ul>
-                                    <h2>Wann und wo?</h2>
-                                    <p>Am <b>Samstag, den 22.07.2017</b> um <b>15:00 Uhr</b> treffen wir uns bei mir (<b>74889 Sinsheim, Hinterer Hettenberg 16</b>)</p>
+                                    <div style="height: 145mm">
+                                        <h1>DU BIST EINGELADEN<br><?= $name ?></h1>
+                                        <h2>Mitzubringen sind:</h2>
+                                        <ul>
+                                            <li>Schlafsack</li>
+                                            <li>Filme</li>
+                                            <li>Taschenlampen</li>
+                                        </ul>
+                                        <h2>Wann und wo?</h2>
+                                        <p>Am <span class="important">Freitag, den 13.07.2018</span> ab <span class="important">15:00 Uhr</span> treffen wir uns bei mir (<span class="important">74889 Sinsheim, Hinterer Hettenberg 16</span>)</p>
+                                        <h2>WhatsApp</h2>
+                                        <p>Scanne den Barcode um beizutreten</p>
+                                        <img style="height: 3.5cm" src="qrcode.jpg" alt="">
+                                    </div>
                                 </td>
                                 <td>
                                     <h2>Was wir machen</h2>
-                                    <p>Geplant ist Kuchenessen, eine Lanparty unter freiem Himmel mit anschließender Übernachtung unter dem Sternenhimmel in Zelten und am Lagerfeuer im Garten. Zu Abend wir es Nudelsalat geben, bei Extrawünschen bitte vorher bescheid geben!</p>
+                                    <p>Geplant ist Kuchenessen, ein Filmabend unter freiem Himmel mit anschließender Nachtwanderung und Übernachtung. Wir können am Lagerfeuer grillen, wenn also irgendwelche Wünsche oder vorlieben/nicht-ess-wünsche gibt, bitte vorher bescheid sagen!</p>
+                                    <p>Es können (wahrscheinlich) nicht alle übernachten, deshalb gilt: Wer sich zuerst meldet darf zuerst.</p>
+                                    <p class="important">Als Zusage gilt, wer in der WhatsApp Gruppe ist.</p>
                                 </td>
                             </tr>
                         </table>

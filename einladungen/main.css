@@ -20,12 +20,19 @@ body {
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+td:nth-child(even) {
+    border-left: 1mm solid black;
+    padding-left: 5mm;
+}
+td:nth-child(odd) {
+    padding-right: 5mm;
+}
 .subpage {
     padding: 1cm;
-    border: 5px red solid;
+    border: 5px rgb(0, 4, 255) solid;
     width: 257mm;
     height: 165mm;
-    outline: 1.5cm #FFEAEA dotted;
+    outline: 1.5cm rgb(170, 175, 245) dotted;
 }
 tr, table {
     width: 100%;
@@ -38,11 +45,17 @@ td {
 
 li {
     text-align: left;
+    list-style-image: linear-gradient(to right, rgba(5, 42, 255, 0.65) 0%,rgba(0,0,0,0) 100%);
 }
 
 img {
     max-height: 150mm;
     max-width: 237mm;
+}
+
+.important {
+    color: red;
+    font-weight: bolder;
 }
 
 @page {
