@@ -46,7 +46,7 @@
                                         <h2>Mitzubringen sind:</h2>
                                         <ul>
                                             <li>Schlafsack</li>
-                                            <li>Filme</li>
+                                            <li>Filme (auch auf Blu-Ray)</li>
                                             <li>Taschenlampen</li>
                                         </ul>
                                         <h2>Wann und wo?</h2>
@@ -59,7 +59,7 @@
                                 <td>
                                     <h2>Was wir machen</h2>
                                     <p>Geplant ist Kuchenessen, ein Filmabend unter freiem Himmel mit anschließender Nachtwanderung und Übernachtung. Wir können am Lagerfeuer grillen, wenn also irgendwelche Wünsche oder vorlieben/nicht-ess-wünsche gibt, bitte vorher bescheid sagen!</p>
-                                    <p>Es können (wahrscheinlich) nicht alle übernachten, deshalb gilt: Wer sich zuerst meldet darf zuerst.</p>
+                                    <p>Es können (wahrscheinlich) nicht alle übernachten, deshalb gilt: Wer den weiteren Weg hat, hat vorrang.</p>
                                     <p class="important">Als Zusage gilt, wer in der WhatsApp Gruppe ist.</p>
                                 </td>
                             </tr>
