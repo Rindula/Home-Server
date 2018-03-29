@@ -15,9 +15,9 @@ body {
     width: 297mm;
     padding: 20mm;
     margin: 10mm auto;
-    border: 1px #D3D3D3 solid;
+    border: 1px #d3d3d3 solid;
     border-radius: 5px;
-    background: white;
+    background: rgba(255, 153, 0, 0.15);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 td:nth-child(even) {
@@ -29,10 +29,10 @@ td:nth-child(odd) {
 }
 .subpage {
     padding: 1cm;
-    border: 5px rgb(0, 4, 255) solid;
+    border: 5px #7206ff solid;
     width: 257mm;
     height: 165mm;
-    outline: 1.5cm rgb(170, 175, 245) dotted;
+    outline: 1.5cm #c3c3c3 dashed;
 }
 tr, table {
     width: 100%;
@@ -54,8 +54,12 @@ img {
 }
 
 .important {
-    color: red;
+    color: #ff0000;
     font-weight: bolder;
+}
+
+.blend {
+    opacity: 0.2;
 }
 
 @page {
@@ -66,7 +70,8 @@ img {
 @media print {
     html, body {
         height: 210mm;
-        width: 297mm;        
+        width: 297mm;      
+        -webkit-print-color-adjust: exact;  
     }
     .page {
         margin: 0;
@@ -75,7 +80,6 @@ img {
         height: initial;
         width: initial;
         box-shadow: initial;
-        background: initial;
         page-break-after: always;
     }
 }
