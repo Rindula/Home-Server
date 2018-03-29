@@ -28,9 +28,9 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <h1>Einladung</h1>
-                                    <h2>zur Geburtstagsparty</h2>
-                                    <h3 class="blend">Ich werde 18</h3>
+                                    <h1 class="style">Einladung</h1>
+                                    <h2 class="style">zur Geburtstagsparty</h2>
+                                    <h3 class="blend style">Ich werde 18</h3>
                                 </td>
                             </tr>
                         </table>
@@ -43,7 +43,7 @@
                                 <td>
                                     <div style="height: 145mm">
                                         <h1>DU BIST EINGELADEN<br><?= $name ?></h1>
-                                        <h2>Mitzubringen sind:</h2>
+                                        <h2>Mitzubringen wäre gut:</h2>
                                         <ul>
                                             <li>Schlafsack/Schlafzeug</li>
                                             <li>Filme (auch auf Blu-Ray)</li>
@@ -54,7 +54,7 @@
                                         <p>Am <span class="important">Freitag, den 13.07.2018</span> ab <span class="important">15:00 Uhr</span> treffen wir uns bei mir (<span class="important">74889 Sinsheim, Hinterer Hettenberg 16</span>)</p>
                                         <h2>WhatsApp</h2>
                                         <p>Scanne den Barcode um der Gruppe sofort beizutreten</p>
-                                        <img style="height: 3cm" src="qrcode.png" alt="">
+                                        <img style="height: 2.5cm" src="qrcode.png" alt="">
                                     </div>
                                 </td>
                                 <td>
