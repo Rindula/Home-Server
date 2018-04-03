@@ -165,10 +165,14 @@
             var i;
             for (i = 0; i < close.length; i++) {
                 close[i].onclick = function () {
-                    var div = this.parentElement;
-                    div.style.display = "none";
 
                     var closer = new XMLHttpRequest();
+                    closer.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            var div = this.parentElement;
+                            div.style.display = "none";
+                        }
+                    }
                     closer.open("GET", "process.php?t=delete&v=" + this.parentElement.getAttribute("database-id"), true);
                     closer.send();
                 }
@@ -197,7 +201,7 @@
             var t = document.createTextNode(inputValue);
             li.appendChild(t);
             if (inputValue === '') {
-                alert("You must write something!");
+                alert("Faullenzer!!");
                 return;
             }
             document.getElementById("myInput").value = "";
