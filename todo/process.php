@@ -25,7 +25,17 @@ switch ($type) {
     case 'list':
         $res = $mysql->query("SELECT * FROM list");
         while ($r = $res->fetch_assoc()) {
-            echo "<li database-id='".$r["entry"]."' class='".(($r["done"] == 1) ? "checked" : "")."'>".$r["entry"]."</li>";
+            $cl = "";
+            $stamp = new DateTime(date("Y-m-d", strtotime($r["timestamp"])));
+            $now = new DateTime();
+            $now->modify('-1 week');
+            $diff = $now->diff($stamp);
+            $diff = $diff->format("%d");
+            if ($diff >= 7)
+            {
+                $cl .= " wichtig";
+            }
+            echo "<li database-id='".$r["timestamp"]."' class='".(($r["done"] == 1) ? "checked" : "")."$cl'>".$r["entry"]." </li>";
         }
         break;
 

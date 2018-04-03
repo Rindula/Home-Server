@@ -13,6 +13,10 @@
             box-sizing: border-box;
         }
 
+        .wichtig:not(.checked) {
+            background-color:#f48336 !important;
+        }
+
         /* Remove margins and padding from the list */
 
         ul {
@@ -30,11 +34,17 @@
             font-size: 18px;
             transition: 0.2s;
 
+            border-top: 1px solid black;
+
             /* make the list items unselectable */
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+        }
+
+        ul li:last-child {
+            border-bottom: 1px solid black;
         }
 
         /* Set all odd list items to a different color (zebra-stripes) */
@@ -165,12 +175,13 @@
             var i;
             for (i = 0; i < close.length; i++) {
                 close[i].onclick = function () {
-
+                    var btn = this;
                     var closer = new XMLHttpRequest();
                     closer.onreadystatechange = function () {
                         if (this.readyState == 4 && this.status == 200) {
-                            var div = this.parentElement;
+                            var div = btn.parentElement;
                             div.style.display = "none";
+                            div.parentNode.removeChild(div);
                         }
                     }
                     closer.open("GET", "process.php?t=delete&v=" + this.parentElement.getAttribute("database-id"), true);
