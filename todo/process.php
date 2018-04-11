@@ -47,7 +47,14 @@ switch ($type) {
         $value = $mysql->real_escape_string($_GET["v"]);
         $value2 = $mysql->real_escape_string($_GET["v2"]);
 
-        $mysql->query("UPDATE list SET done = $value WHERE entry = '$value2'");
+        $q = $mysql->query("UPDATE list SET done = $value WHERE timestamp = '$value2'");
+
+        if ($q) {
+            http_response_code(200);
+        } else {
+            http_response_code(501);
+        }
+        
         break;
 
     case 'delete':
@@ -57,7 +64,14 @@ switch ($type) {
         }
         $value = $mysql->real_escape_string($_GET["v"]);
 
-        $mysql->query("DELETE FROM list WHERE entry = '$value'");
+        $q = $mysql->query("DELETE FROM list WHERE timestamp = '$value'");
+
+        if ($q) {
+            http_response_code(200);
+        } else {
+            http_response_code(501);
+        }
+
         break;
         
     default:
