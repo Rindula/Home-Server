@@ -63,6 +63,7 @@
                                     <p>Es können (wahrscheinlich) nicht alle übernachten, deshalb gilt: Wer den weiteren Weg hat, hat vorrang.</p>
                                     <p class="important">Als Zusage gilt, wer in der WhatsApp Gruppe ist.</p>
                                     <p>Wenn du alkoholisches trinken möchtest, sag bitte ebenfalls bescheid, da ich nicht so viel Ahnung von dem hab, was du magst.</p>
+                                    <small>Wenn du keinen Barcodescanner hast, dann frag mich einfach wegen dem Gruppenbeitritt</small>
                                 </td>
                             </tr>
                         </table>
