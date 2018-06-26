@@ -19,6 +19,10 @@ switch ($type) {
         $value = $mysql->real_escape_string($_GET["v"]);
 
         $mysql->query("INSERT INTO list (entry) VALUES ('$value')");
+        $res = $mysql->query("SELECT * FROM list WHERE timestamp = '".date('Y-m-d G:i:s')."' ORDER BY timestamp DESC LIMIT 1");
+        while ($r = $res->fetch_assoc()) {
+            echo "<li database-id='".$r["timestamp"]."' class=''>".$r["entry"]." </li>";
+        }
         break;
     
 
