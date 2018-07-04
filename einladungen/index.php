@@ -47,11 +47,11 @@
                                         <ul>
                                             <li>Schlafsack/Schlafzeug</li>
                                             <li>Filme (auch auf Blu-Ray)</li>
-                                            <li>Taschenlampen</li>
+                                            <li>Taschenlampen (Ich hab auch noch ein paar da)</li>
                                             <li>Spaß</li>
                                         </ul>
                                         <h2>Wann und wo?</h2>
-                                        <p>Am <span class="important">Freitag, den 13.07.2018</span> ab <span class="important">15:00 Uhr</span> treffen wir uns bei mir (<span class="important">74889 Sinsheim, Hinterer Hettenberg 16</span>)</p>
+                                        <p>Am <span class="important">Samstag, den 14.07.2018</span> ab <span class="important">15:00 Uhr</span> dürft ihr bei mir eintreffen (<span class="important">74889 Sinsheim, Hinterer Hettenberg 16</span>)</p>
                                         <h2>WhatsApp</h2>
                                         <p>Scanne den Barcode um der Gruppe sofort beizutreten</p>
                                         <img style="height: 2.5cm" src="qrcode.png" alt="">
