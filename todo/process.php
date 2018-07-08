@@ -21,7 +21,7 @@ switch ($type) {
         $mysql->query("INSERT INTO list (entry) VALUES ('$value')");
         $res = $mysql->query("SELECT * FROM list WHERE timestamp = '".date('Y-m-d G:i:s')."' ORDER BY timestamp DESC LIMIT 1");
         while ($r = $res->fetch_assoc()) {
-            echo "<li database-id='".$r["timestamp"]."' class=''>".$r["entry"]." </li>";
+            echo "<li database-id='".$r["timestamp"]."' class=''>".$r["entry"]."</li>";
         }
         break;
     
@@ -39,7 +39,7 @@ switch ($type) {
             {
                 $cl .= " wichtig";
             }
-            echo "<li database-id='".$r["timestamp"]."' class='".(($r["done"] == 1) ? "checked" : "")."$cl'>".$r["entry"]." </li>";
+            echo "<li database-id='".$r["timestamp"]."' class='".(($r["done"] == 1) ? "checked" : "")."$cl'>".$r["entry"]."</li>";
         }
         break;
 
